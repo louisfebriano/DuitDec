@@ -3,29 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="/assets/css/dashboard.css">
     <link rel="stylesheet" href="/assets/css/sidebar.css">
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Document</title>
 </head>
 <body>
+
     <div class="navbar">
         <div id="sidebarContainer"></div>
         <div class="navbar-title">
-            <h1 style="align-items: center;">Overview</h1>
+            <h1 style="align-items: center;">Transaction</h1>
         </div>
-    </div>    
-
-    <div class="main-content" id="mainContent">
-        <h2>Welcome to the Dashboard</h2>
-        <p>This is the main content area. The content adjusts when the sidebar is toggled.</p>
-        <!-- <div class="card">
-            <h4>Summary</h4>
-            <h2>Balance :</h2>
-        </div> -->
-    </div>
-
+    </div>  
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -34,10 +25,7 @@
             .then(data => {
                 document.getElementById('sidebarContainer').innerHTML = data;
             });
-    });
-
+        });
     </script>
-    <script src="/assets/js/dashboard.js"></script>
 </body>
-
 </html>

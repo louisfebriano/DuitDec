@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    margin-top: 80px; 
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+    margin-left: 20px;
+}
+
+.main-content .card{
+    background-color: #fff;
+    border: 1px solid;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 10px; /* Smaller padding for smaller screens */
+    }
+    
+    .navbar-title h1 {
+        font-size: 20px; /* Reduce font size */
+    }
+    
+    .main-content {
+        margin-left: 10px; /* Adjust margin for smaller screen */
+    }
+}
