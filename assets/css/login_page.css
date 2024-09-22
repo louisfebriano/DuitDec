@@ -177,7 +177,12 @@ button:hover {
   .movie-ticket {
     width: 100%;
   }
-
+  .ads-img {
+    max-width: 100%; /* Ensures the image scales with the container */
+    height: auto;    /* Maintains the aspect ratio */
+    display: block;  /* Ensures no extra space at the sides */
+    margin: 10px auto; /* Centers the image */
+}
   .movie-ticket {
     margin-top: 20px;
     border-left: none;
@@ -197,6 +202,12 @@ button:hover {
     flex-direction: column;
     padding: 25px;
   }
+  .ads-img {
+    max-width: 100%; 
+    height: auto;  
+    display: block;  
+    margin: 10px auto; 
+}
 
   .movie-ticket {
     margin-top: 20px;
@@ -215,6 +226,13 @@ button:hover {
   .login-section {
     width: 40%;
   }
+
+  .ads-img {
+    max-width: 100%; 
+    height: auto;    
+    display: block; 
+    margin: 10px auto; 
+}
   .movie-ticket {
     margin-top: 20px;
     width: 70%;
