@@ -23,7 +23,7 @@ function toggleForm() {
     form.innerHTML = `
                     <input type="email" placeholder="Email" required>
                     <input type="password" placeholder="Password" required>
-                    <button type="button" onclick="login()">Login</button>
+                    <button type="button" onclick="login  ()">Login</button>
                 `;
     switchText.innerHTML =
       'Don\'t have an account? <a href="#" onclick="toggleForm()">Register</a>';
@@ -55,8 +55,8 @@ function register() {
   }
 
   if (password !== confirmPassword) {
-    alert("Passwords do not match.");
+    alert("Passwords does not match.");
     return;
   }
-  window.location.href = "/pages/dashboard.html"; 
+  window.location.href = "/pages/login_page.html"; 
 }
