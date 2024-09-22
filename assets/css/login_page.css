@@ -116,7 +116,6 @@ button:hover {
   height:150px;
   width: auto;
   justify-content: center;
-  padding-left: 10px;
 }
 
 .movie-ticket {
@@ -173,11 +172,21 @@ button:hover {
     flex-direction: column;
     padding: 20px;
   }
-  .login-section,
+  .login-section{
+    width: 70%;
+    height: auto;    
+    display: block; 
+    margin: 10px auto; 
+  }
   .movie-ticket {
     width: 100%;
   }
-
+  .ads-img {
+    max-width: 100%; 
+    height: auto;   
+    display: block; 
+    margin: 10px auto;
+}
   .movie-ticket {
     margin-top: 20px;
     border-left: none;
@@ -188,7 +197,12 @@ button:hover {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .login-section,
+  .login-section{
+    width: 50%;
+    height: auto;    
+    display: block; 
+    margin: 10px auto; 
+  }
   .movie-ticket {
     width: 100%;
     padding: 0;
@@ -197,6 +211,12 @@ button:hover {
     flex-direction: column;
     padding: 25px;
   }
+  .ads-img {
+    max-width: 100%; 
+    height: auto;  
+    display: block;  
+    margin: 10px auto; 
+}
 
   .movie-ticket {
     margin-top: 20px;
@@ -213,8 +233,18 @@ button:hover {
     flex-direction: row;
   }
   .login-section {
-    width: 40%;
+    max-width: 100%; 
+    height: auto;    
+    display: block; 
+    margin: 10px auto; 
   }
+
+  .ads-img {
+    max-width: 100%; 
+    height: auto;    
+    display: block; 
+    margin: 10px auto; 
+}
   .movie-ticket {
     margin-top: 20px;
     width: 70%;
