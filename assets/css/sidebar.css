@@ -9,7 +9,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fdfcfc;
+    background-color: #f1f1f1;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -17,6 +17,7 @@ body {
 
 /* Navbar Style */
 .navbar {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: left;
@@ -26,19 +27,17 @@ body {
     background-color: #f9a600;
     color: white;
     z-index: 900;
-    padding-left: 85px; /* Add space to prevent overlap */
+    padding-left: 85px; 
 }
 .navbar-title {
     display: flex;
-    align-items: center;
-    justify-items: center;
+    text-align: left;
 }
 
 .navbar-title h1 {
     font-size: 24px;
-    margin-left: 20px; /* Adjust spacing */
+    margin-left: 20px; 
     text-align: center;
-    white-space: nowrap;
 }
 
 .navbar a {
@@ -49,15 +48,6 @@ body {
     padding-right: 10px;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0 10px; /* Smaller padding for smaller screens */
-    }
-    
-    .navbar-title h1 {
-        font-size: 20px; /* Reduce font size */
-    }
-}
 
 
 /* Side Bar */
@@ -70,8 +60,8 @@ body {
     display: flex;
     overflow-x: hidden;
     flex-direction: column;
-    background: #fff; /* Change to white */
-    color: #192227;   /* Text color to black */
+    background: #fff;
+    color: #192227; 
     padding: 25px 20px;
     transition: all 0.4s ease;
 }
@@ -137,7 +127,7 @@ width: 280px;
     display: flex;
     align-items: center;
     gap: 0 20px;
-    color: #192227; /* Black text color */
+    color: #192227; 
     font-weight: 500;
     white-space: nowrap;
     padding: 15px 10px;
@@ -145,7 +135,7 @@ width: 280px;
     transition: 0.2s ease;
 }
 .sidebar-links li a:hover {
-    background: #f9a600; /* Orange hover background */
+    background: #f9a600; 
     color: #fff;
     border-radius: 4px;
 }
@@ -169,7 +159,7 @@ width: 280px;
     font-weight: 600;
   }
   .user-profile h3, .user-profile span {
-    color: #192227; /* Black for user info text */
+    color: #192227;
 }
   .user-profile span {
     font-size: 0.775rem;
@@ -270,3 +260,7 @@ width: 280px;
     background: #f9a600;
     border-radius: 4px;
   }
+
+@media (max-width: 768px) {
+  
+}

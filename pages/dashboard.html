@@ -22,7 +22,7 @@
 
             <div class="card" style="flex-direction: column;">
                 <div class="card-title">
-                    <h3>Summary</h2>
+                    <h3>Summary</h3>
                 </div>
                 <div class="card-content">
                     <div class="card-container">
@@ -74,15 +74,55 @@
                             <p class="negative">-$396.76</p>
                         </div>
                         <hr>
-                        <p  style="display: flex; justify-content: end;"class="positive">
+                        <p style="display: flex; justify-content: end;"class="positive">
                             $1,103.24</p>
                     </div>
                 </div>
             </div>
-            
-    
         </div>
+        
+        <div class="row">
+            <div class="card" style="width: 100%; flex-direction: column;">                
+                <h3>Accounts</h3>
+                <div class="card-container">
+                    <p>Wallet</p>
+                    <p class="positive">$90.24</p>
+                </div>
+                <p  style="display: flex; justify-content: end;">
+                    USD - $</p>
+                <hr>
+                <div class="card-container">
+                    <p>Bank Account</p>
+                    <p class="positive">$13,534.24</p>
+                </div>
+                <p style="display: flex; justify-content: end;">
+                    USD - $</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card" style="width: 100%; flex-direction: column;">
+                <h3>Credit Cards</h3>
+                <div class="card-container">
+                    <p>Credit Card</p>
+                    <p class="negative">-$189.76</p>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="myProgressBar">0%</div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <script>
+        function updateProgressBar(percent) {
+            var progressBar = document.getElementById("myProgressBar");
+            progressBar.style.width = percent + "%";
+            progressBar.textContent = percent + "%";
+        }
+        updateProgressBar(19);  
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
