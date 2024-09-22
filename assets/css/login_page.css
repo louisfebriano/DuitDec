@@ -178,10 +178,10 @@ button:hover {
     width: 100%;
   }
   .ads-img {
-    max-width: 100%; /* Ensures the image scales with the container */
-    height: auto;    /* Maintains the aspect ratio */
-    display: block;  /* Ensures no extra space at the sides */
-    margin: 10px auto; /* Centers the image */
+    max-width: 100%; 
+    height: auto;   
+    display: block; 
+    margin: 10px auto;
 }
   .movie-ticket {
     margin-top: 20px;
