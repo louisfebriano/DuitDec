@@ -3,7 +3,7 @@ function toggleForm() {
   const h2 = container.querySelector("h2");
   const form = container.querySelector("form");
   const switchText = container.querySelector(".switch");
-  const image = container.querySelector(".ads-img"); // Add this line to select the image
+  const image = container.querySelector(".ads-img"); 
 
   if (h2.textContent === "Login") {
     h2.textContent = "Register";
