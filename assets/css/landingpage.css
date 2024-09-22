@@ -6,12 +6,20 @@ body, html {
     font-weight: 600;
 }
 
+a {
+    text-decoration:none;
+}
+
+body.no-scroll {
+    overflow: hidden; /* Cegah scroll */
+}
+
 /* Splash Screen Styling */
 #splash-screen {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     background: #192227;
     position: absolute;
     width: 100%;
@@ -38,14 +46,10 @@ body, html {
 
 /* Navbar Styling */
 #navbar {
-    top: 0;
-    left: 0;
-    width: 100%;
     background: #192227;
     color: #fdfcfc;
     height: 30px;
     padding: 5px 20px;
-    /* z-index: 999; */
 }
 
 .navbar-content {
@@ -94,18 +98,17 @@ body, html {
 
 /* Center Card Styling */   
 #center-card {
+    margin: 20px 19px 20px 19px;
     background-color: #fdfcfc;
     color: #192227;
-    width: 95%;
-    max-width: 1920px;
     height: 400px;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 45px auto 0;
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between; /* Space between the text and image sections */
-    align-items: center; /* Center content vertically */
+    margin-top: 5px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 /* Styling for text section */
@@ -114,7 +117,7 @@ body, html {
 }
 
 #center-card h2 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: #f9a600;
     margin-bottom: 10px;
 }
@@ -132,8 +135,7 @@ body, html {
 }
 
 .image-section img {
-    max-width: 90%; 
-    max-height: 80%;
+    max-width: 400px; 
 }
 
 
@@ -146,26 +148,119 @@ body, html {
     max-width: 1920px;
 }
 
+.card-left {
+    width: 70%;
+    padding: 20px;
+}
+
+.card-right {
+    width: 30%;
+}
+
 .card-left, .card-right {
     background-color: #fdfcfc;
     color: #192227;
     margin: 0 5px;
-    padding: 20px;
     border-radius: 8px;
-    width: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.card-right #login-btn {
-    background-color: #f9a600;
-    color: #fdfcfc;
-    padding: 10px 20px;
-    border: none;
+.sponsor-image {
+    width: 30%; /* Set to 30% for a nice layout */
+    height: 90px;
+    margin: 0 5px;
     border-radius: 4px;
-    cursor: pointer;
 }
 
-.card-right #login-btn:hover {
+#get-access-btn {
+    width: 100%;
+    height: 100%;
+    background-color: #f9a600;
+    color: #fdfcfc;
+    font-size: 3rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#get-access-btn:hover {
     background-color: #d98800;
+}
+
+#center-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Card Container */
+#card-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Card Left & Right */
+.card-left, .card-right {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#features-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1920px; 
+    margin-top: 100px;
+    background-color: #fdfcfc;
+    color: #192227;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.features-left {
+    width: 35%;
+    padding: 20px;
+}
+
+.features-right {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-right img {
+    max-width: 100%; /* Pastikan gambar responsif */
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #f9a600;
+    margin-bottom: 20px;
+}
+
+.feature {
+    margin: 15px 0;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.feature p {
+    font-size: 1.2rem;
+    color: #192227;
 }
