@@ -13,31 +13,126 @@
     <div class="navbar">
         <div id="sidebarContainer"></div>
         <div class="navbar-title">
-            <h1 style="align-items: center;">Overview</h1>
+            <h1>Overview</h1>
         </div>
     </div>    
 
-    <div class="main-content" id="mainContent">
-        <h2>Welcome to the Dashboard</h2>
-        <p>This is the main content area. The content adjusts when the sidebar is toggled.</p>
-        <!-- <div class="card">
-            <h4>Summary</h4>
-            <h2>Balance :</h2>
-        </div> -->
+    <div class="main-content">
+        <div class="row">
+
+            <div class="card" style="flex-direction: column;">
+                <div class="card-title">
+                    <h3>Summary</h3>
+                </div>
+                <div class="card-content">
+                    <div class="card-container">
+                        <p>Balance:</p>
+                        <p class="positive">$123.123,12</p>
+                    </div>
+                    <div class="card-container">
+                        <p>Credit Cards:</p>
+                        <p class="negative">-$11.111,11</p>
+                    </div>
+                    <hr>
+                    <p style="display: flex; justify-content: end;" class="positive">
+                        $123.123.123,00
+                    </p>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div style="display: flex;">
+                    <div class="donut-chart-placeholder"></div>
+                    <div class="card-content" style="margin-left: 20px;">
+                        <h3>This Month</h3>
+                        <div class="card-container">
+                            <p>Income:</p>
+                            <p class="positive">$1,500.00</p>
+                        </div>
+                        <div class="card-container">
+                            <p>Outcome:</p>
+                            <p class="negative">-$396.76</p>
+                        </div>
+                        <hr>
+                        <p  style="display: flex; justify-content: end;"class="positive">
+                            $1,103.24</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div style="display: flex;">
+                    <div class="donut-chart-placeholder"></div>
+                    <div class="card-content" style="margin-left: 20px;">
+                        <h3>Last Month</h3>
+                        <div class="card-container">
+                            <p>Income:</p>
+                            <p class="positive">$1,500.00</p>
+                        </div>
+                        <div class="card-container">
+                            <p>Outcome:</p>
+                            <p class="negative">-$396.76</p>
+                        </div>
+                        <hr>
+                        <p style="display: flex; justify-content: end;"class="positive">
+                            $1,103.24</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="card" style="width: 100%; flex-direction: column;">                
+                <h3>Accounts</h3>
+                <div class="card-container">
+                    <p>Wallet</p>
+                    <p class="positive">$90.24</p>
+                </div>
+                <p  style="display: flex; justify-content: end;">
+                    USD - $</p>
+                <hr>
+                <div class="card-container">
+                    <p>Bank Account</p>
+                    <p class="positive">$13,534.24</p>
+                </div>
+                <p style="display: flex; justify-content: end;">
+                    USD - $</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card" style="width: 100%; flex-direction: column;">
+                <h3>Credit Cards</h3>
+                <div class="card-container">
+                    <p>Credit Card</p>
+                    <p class="negative">-$189.76</p>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="myProgressBar">0%</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
+    <script>
+        function updateProgressBar(percent) {
+            var progressBar = document.getElementById("myProgressBar");
+            progressBar.style.width = percent + "%";
+            progressBar.textContent = percent + "%";
+        }
+        updateProgressBar(19);  
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-        fetch('/pages/sidebar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('sidebarContainer').innerHTML = data;
-            });
-    });
-
+            fetch('/pages/sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebarContainer').innerHTML = data;
+                });
+        });
     </script>
     <script src="/assets/js/dashboard.js"></script>
 </body>
-
 </html>
