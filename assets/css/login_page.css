@@ -127,9 +127,11 @@ button:hover {
 }
 
 .movie-ticket p {
+  margin-right: 20px;
   color: var(--white);
   font-size: 18px;
   text-align: justify;
+  width: 90%;
 }
 
 .movie-ticket-bottom {
@@ -152,6 +154,14 @@ button:hover {
   margin-right: 20px;
 }
 
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.02); }
@@ -168,7 +178,6 @@ button:hover {
     width: 100%;
   }
 
-  /* Change border-left to border-top on small screens */
   .movie-ticket {
     margin-top: 20px;
     border-left: none;
@@ -178,7 +187,6 @@ button:hover {
   }
 }
 
-/* For tablets and smaller desktops (769px to 1024px) */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .login-section,
   .movie-ticket {
