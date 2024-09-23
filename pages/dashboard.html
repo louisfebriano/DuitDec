@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
@@ -120,25 +121,6 @@
         </div>
 
     </div>
-
-    <script>
-        function updateProgressBar(percent) {
-            var progressBar = document.getElementById("myProgressBar");
-            progressBar.style.width = percent + "%";
-            progressBar.textContent = percent + "%";
-        }
-        updateProgressBar(19);  
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('/pages/sidebar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('sidebarContainer').innerHTML = data;
-                });
-        });
-    </script>
 
     
     <script src="/assets/js/dashboard.js"></script>
