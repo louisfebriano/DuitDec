@@ -1,62 +1,64 @@
 function toggleForm() {
-  const container = document.querySelector(".container");
-  const h2 = container.querySelector("h2");
-  const form = container.querySelector("form");
-  const switchText = container.querySelector(".switch");
-  const image = container.querySelector(".ads-img"); 
+  const $container = $(".container");
+  const $h2 = $container.find("h2");
+  const $form = $container.find("form");
+  const $switchText = $container.find(".switch");
+  const $image = $container.find(".ads-img"); 
 
-  if (h2.textContent === "Login") {
-    h2.textContent = "Register";
-    form.innerHTML = `
+  if ($h2.text() === "Login") {
+    $h2.text("Register");
+    $form.html(`
                     <input type="text" placeholder="Full Name" required>
                     <input type="email" placeholder="Email" required>
                     <input type="password" placeholder="Password" required>
                     <input type="password" placeholder="Confirm Password" required>
                     <button type="button" onclick="register()">Register</button>
-                `;
-    switchText.innerHTML =
-      'Already have an account? <a href="#" onclick="toggleForm()">Login</a>';
+                `);
+    $switchText.html(
+      'Already have an account? <a href="#" onclick="toggleForm()">Login</a>'
+    );
     
-    image.style.display = 'none';
+    $image.hide();
   } else {
-    h2.textContent = "Login";
-    form.innerHTML = `
+    $h2.text("Login");
+    $form.html(`
                     <input type="email" placeholder="Email" required>
                     <input type="password" placeholder="Password" required>
-                    <button type="button" onclick="login  ()">Login</button>
-                `;
-    switchText.innerHTML =
-      'Don\'t have an account? <a href="#" onclick="toggleForm()">Register</a>';
+                    <button type="button" onclick="login()">Login</button>
+                `);
+    $switchText.html(
+      'Don\'t have an account? <a href="#" onclick="toggleForm()">Register</a>'
+    );
     
-    image.style.display = 'block';
+    $image.show();
   }
 }
 
 function login() {
-  const email = document.querySelector('input[type="email"]').value;
-  const password = document.querySelector('input[type="password"]').value;
+  const email = $('input[type="email"]').val();
+  const password = $('input[type="password"]').val();
 
   if (email === "" || password === "") {
-      alert("Please fill out both fields.");
-      return;
+    alert("Please fill out both fields.");
+    return;
   }
   window.location.href = "/pages/dashboard.html"; 
 }
 
 function register() {
-  const fullName = document.querySelector('input[placeholder="Full Name"]').value;
-  const email = document.querySelector('input[placeholder="Email"]').value;
-  const password = document.querySelector('input[placeholder="Password"]').value;
-  const confirmPassword = document.querySelector('input[placeholder="Confirm Password"]').value;
+  const fullName = $('input[placeholder="Full Name"]').val();
+  const email = $('input[placeholder="Email"]').val();
+  const password = $('input[placeholder="Password"]').val();
+  const confirmPassword = $('input[placeholder="Confirm Password"]').val();
 
-  if (email === "" || password === ""|| confirmPassword === "" || fullName === "") {
-      alert("Please fill out both fields.");
-      return;
+  if (email === "" || password === "" || confirmPassword === "" || fullName === "") {
+    alert("Please fill out all fields.");
+    return;
   }
 
   if (password !== confirmPassword) {
-    alert("Passwords does not match.");
+    alert("Passwords do not match.");
     return;
   }
-  window.location.href = "/pages/login_page.html"; 
+  window.location.href = "/pages/dashboard.html"; 
 }
