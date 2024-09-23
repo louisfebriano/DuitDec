@@ -10,17 +10,19 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    
     <div class="navbar">
         <div id="sidebarContainer"></div>
         <div class="navbar-title">
             <h1>Overview</h1>
         </div>
     </div>    
-
+    
     <div class="main-content">
         <div class="row">
 
-            <div class="card" style="flex-direction: column;">
+            <div class="card slide-in-v" style="flex-direction: column; 
+            animation: slideInV 0.5s forwards;" >
                 <div class="card-title">
                     <h3>Summary</h3>
                 </div>
@@ -40,7 +42,8 @@
                 </div>
             </div>
         
-            <div class="card">
+            <div class="card slide-in-v" 
+            style="animation: slideInV 1s forwards;" >
                 <div style="display: flex;">
                     <div class="donut-chart-placeholder"></div>
                     <div class="card-content" style="margin-left: 20px;">
@@ -60,7 +63,8 @@
                 </div>
             </div>
             
-            <div class="card">
+            <div class="card slide-in-v" 
+            style="animation: slideInV 1.5s forwards;" >
                 <div style="display: flex;">
                     <div class="donut-chart-placeholder"></div>
                     <div class="card-content" style="margin-left: 20px;">
@@ -82,7 +86,8 @@
         </div>
         
         <div class="row">
-            <div class="card" style="width: 100%; flex-direction: column;">                
+            <div class="card slide-in-h" style="width: 100%; flex-direction: column; 
+            animation: slideInH 1.5s forwards; animation-delay: 1s;">                
                 <h3>Accounts</h3>
                 <div class="card-container">
                     <p>Wallet</p>
@@ -101,7 +106,8 @@
         </div>
 
         <div class="row">
-            <div class="card" style="width: 100%; flex-direction: column;">
+            <div class="card slide-in-h" style="width: 100%; flex-direction: column;
+            animation: slideInH 1.5s forwards; animation-delay: 1.5s;">
                 <h3>Credit Cards</h3>
                 <div class="card-container">
                     <p>Credit Card</p>
@@ -133,6 +139,8 @@
                 });
         });
     </script>
+
+    
     <script src="/assets/js/dashboard.js"></script>
 </body>
 </html>

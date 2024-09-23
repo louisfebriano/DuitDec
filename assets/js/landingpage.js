@@ -7,9 +7,8 @@ window.addEventListener('load', () => {
     const cardLeft = document.querySelector('.card-left');
     const cardRight = document.querySelector('.card-right');
     const centerCard = document.getElementById('center-card');
-    const body = document.body; // Ambil elemen body
+    const body = document.body; 
 
-    // Tambahkan kelas no-scroll pada body
     body.classList.add('no-scroll');
 
     setTimeout(() => {
@@ -22,7 +21,6 @@ window.addEventListener('load', () => {
             splashScreen.style.display = 'none';
             logoNavbar.style.opacity = '1';
 
-            // Hapus kelas no-scroll dari body setelah splash screen dihapus
             body.classList.remove('no-scroll');
 
             navbarListItems.forEach((item, index) => {

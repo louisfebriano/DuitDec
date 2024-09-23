@@ -11,7 +11,7 @@ a {
 }
 
 body.no-scroll {
-    overflow: hidden; /* Cegah scroll */
+    overflow: hidden; 
 }
 
 /* Splash Screen Styling */
@@ -36,10 +36,10 @@ body.no-scroll {
 /* Keyframes for shrinking the logo */
 @keyframes shrinkLogo {
     0% {
-        transform: scale(1); /* Initial large size */
+        transform: scale(1);
     }
     100% {
-        transform: scale(0.5); /* Final smaller size */
+        transform: scale(0.5); 
     }
 }
 
@@ -54,8 +54,8 @@ body.no-scroll {
 
 .navbar-content {
     display: flex;
-    justify-content: space-between; /* Ensure logo and list are spaced */
-    align-items: center; /* Align content vertically */
+    justify-content: space-between;
+    align-items: center; 
     width: 100%;
 }
 
@@ -135,7 +135,7 @@ body.no-scroll {
 }
 
 .image-section img {
-    max-width: 400px; 
+    max-width: 90%; 
 }
 
 
@@ -167,7 +167,7 @@ body.no-scroll {
 }
 
 .sponsor-image {
-    width: 30%; /* Set to 30% for a nice layout */
+    width: 30%; 
     height: 90px;
     margin: 0 5px;
     border-radius: 4px;
@@ -241,7 +241,7 @@ body.no-scroll {
 }
 
 .features-right img {
-    max-width: 100%; /* Pastikan gambar responsif */
+    max-width: 100%; 
     border-radius: 8px;
 }
 
