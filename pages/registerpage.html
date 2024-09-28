@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA Check-Style Registration</title>
+    <link rel="stylesheet" href="/assets/css/login-registerpage.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/assets/js/registerpage.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-name">
+                <img src="/assets/images/logo.png" alt="BCA Logo" class="logo">
+                <h2 class="bank-name">DuitDec</h2>
+            </div>
+            <h2 class="form-title">Register</h2>
+            <div class="check-details">
+                <span class="check-no">No. CA 53523456</span>
+                <span class="check-date">12/12/2024</span>
+            </div>
+        </div>
+        <div class="login-section">
+                <div class="login-details">
+                    <h2 class="payee">Full Name:</h2>
+                    <h2 class="payee">Email:</h2>
+                    <h2 class="amount">Password:</h2>
+                    <h2 class="amount confirm-password">Confirm Password:</h2>
+                </div>
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="button" onclick="register()">Register</button>
+            </form>
+        </div>
+
+        <div class="switch">
+            Already have an account? <a href="/pages/loginpage.html">Login</a>
+        </div>
+    </div>
+</body>
+</html>
