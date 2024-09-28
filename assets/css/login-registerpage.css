@@ -1,0 +1,157 @@
+:root {
+  --dark-blue-green: #192227;
+  --orange: #f9a600;
+  --white: #fdfcfc;
+  --text-dark-gray: #555;
+  --light-background: #f8f2e4; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--dark-blue-green); 
+}
+
+.container {
+  background-color: var(--light-background);
+  border: 1px solid var(--text-dark-gray);
+  width: 90%;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom:1px dashed var(--text-dark-gray)
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.bank-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--dark-blue-green);
+}
+
+.check-details {
+  text-align: right;
+  font-size: 14px;
+  color: var(--text-dark-gray);
+}
+
+.check-no, .check-date {
+  display: block;
+}
+
+.check-date {
+  margin-top: 5px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark-blue-green);
+  margin-bottom: 30px;
+}
+
+.login-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.login-details {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  gap: 25px;
+}
+
+.payee, .amount {
+  font-size: 18px;
+  color: var(--dark-blue-green);
+  margin-top: 10px;
+}
+
+.confirm-password{
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 700px;
+}
+
+input {
+  margin-left: 10px;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid var(--text-dark-gray);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--dark-blue-green);
+}
+
+input::placeholder {
+  color: var(--text-dark-gray);
+}
+
+button {
+  width: 100%;
+  margin-left: 10px;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e09500;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 16px;
+  color: var(--dark-blue-green);
+}
+
+.switch a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}
+
