@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     background-color: var(--light-background);
     border: 1px solid var(--text-dark-gray);
@@ -30,7 +30,8 @@ body {
     max-width: 900px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .header {
@@ -42,35 +43,43 @@ body {
     border-bottom: 1px dashed var(--text-dark-gray);
 }
 
-.logo-name {
-    display: flex; 
-    align-items: center;
-}
-
 .logo {
     height: 50px;
     width: auto;
     margin-right: 10px;
+    animation: fadeIn 1s ease-in-out forwards 0.3s;
+}
+
+.logo-name {
+    display: flex; 
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 0.3s;
 }
 
 .bank-name {
     font-size: 24px;
     font-weight: bold;
     color: var(--dark-blue-green);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 0.5s;
 }
 
 .form-title {
     font-size: 24px;
     color: var(--dark-blue-green);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 0.7s;
 }
 
 .check-details {
     display: flex; 
     flex-direction: column;
-    align-items: flex-end;
     text-align: right;
     font-size: 14px;
     color: var(--text-dark-gray);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 1s;
 }
 
 .check-no, .check-date {
@@ -79,7 +88,6 @@ body {
 
 .login-section {
     display: flex; 
-    justify-content: space-between;
     margin-top: 20px;
 }
 
@@ -87,8 +95,9 @@ body {
     display: flex; 
     flex-direction: column;
     width: 120px;
+    animation: slideIn 1s ease-in-out forwards 1.3s;
+    opacity: 0;
 }
-
 
 .login-details h2 {
     font-size: 18px;
@@ -113,6 +122,8 @@ form {
     flex-direction: column;
     gap: 15px;
     flex-grow: 1;
+    animation: slideIn 1s ease-in-out forwards 1.6s;
+    opacity: 0;
 }
 
 input {
@@ -137,6 +148,9 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards 1.9s;
+
 }
 
 button:hover {
@@ -148,6 +162,8 @@ button:hover {
     justify-content: center;
     margin-top: 16px;
     color: var(--dark-blue-green);
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards 2.2s;
 }
 
 .switch a {
@@ -164,6 +180,28 @@ button:hover {
     display: none;
     flex-direction: column;
     gap: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 768px) {
@@ -201,10 +239,6 @@ button:hover {
     .form-title {
         font-size: 20px;
         margin: 10px 0;
-    }
-
-    input, button {
-        font-size: 14px;
     }
 }
 
