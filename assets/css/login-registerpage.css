@@ -1,157 +1,219 @@
 :root {
-  --dark-blue-green: #192227;
-  --orange: #f9a600;
-  --white: #fdfcfc;
-  --text-dark-gray: #555;
-  --light-background: #f8f2e4; 
+    --dark-blue-green: #192227;
+    --orange: #f9a600;
+    --white: #fdfcfc;
+    --text-dark-gray: #555;
+    --light-background: #f8f2e4;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: var(--dark-blue-green); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--dark-blue-green);
 }
 
 .container {
-  background-color: var(--light-background);
-  border: 1px solid var(--text-dark-gray);
-  width: 90%;
-  max-width: 900px;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-direction: column;
+    background-color: var(--light-background);
+    border: 1px solid var(--text-dark-gray);
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom:1px dashed var(--text-dark-gray)
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--text-dark-gray);
 }
 
 .logo-name {
-  display: flex;
-  align-items: center;
+    display: flex; 
+    align-items: center;
 }
 
 .logo {
-  height: 50px;
-  width: auto;
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }
 
 .bank-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--dark-blue-green);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-blue-green);
+}
+
+.form-title {
+    font-size: 24px;
+    color: var(--dark-blue-green);
 }
 
 .check-details {
-  text-align: right;
-  font-size: 14px;
-  color: var(--text-dark-gray);
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    font-size: 14px;
+    color: var(--text-dark-gray);
 }
 
 .check-no, .check-date {
-  display: block;
-}
-
-.check-date {
-  margin-top: 5px;
-}
-
-.login-title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  color: var(--dark-blue-green);
-  margin-bottom: 30px;
+    display: flex; 
 }
 
 .login-section {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .login-details {
-  display: flex;
-  flex-direction: column;
-  width: 100px;
-  gap: 25px;
+    display: flex; 
+    flex-direction: column;
+    width: 120px;
 }
 
-.payee, .amount {
-  font-size: 18px;
-  color: var(--dark-blue-green);
-  margin-top: 10px;
+
+.login-details h2 {
+    font-size: 18px;
+    color: var(--dark-blue-green);
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
-.confirm-password{
-  font-size: 15px;
-  margin-top: 5px;
+.form-group h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.login-details h3 {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 18px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 700px;
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
 }
 
 input {
-  margin-left: 10px;
-  padding: 12px;
-  width: 100%;
-  border: 1px solid var(--text-dark-gray);
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: var(--dark-blue-green);
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--text-dark-gray);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--dark-blue-green);
 }
 
 input::placeholder {
-  color: var(--text-dark-gray);
+    color: var(--text-dark-gray);
 }
 
 button {
-  width: 100%;
-  margin-left: 10px;
-  background-color: var(--orange);
-  color: var(--white);
-  border: none;
-  border-radius: 5px;
-  padding: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #e09500;
+    background-color: #e09500;
 }
 
 .switch {
-  text-align: center;
-  margin-top: 16px;
-  color: var(--dark-blue-green);
+    display: flex; 
+    justify-content: center;
+    margin-top: 16px;
+    color: var(--dark-blue-green);
 }
 
 .switch a {
-  color: var(--orange);
-  text-decoration: none;
+    color: var(--orange);
+    text-decoration: none;
+    margin-left: 5px;
 }
 
 .switch a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
+.mobile-form {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        max-width: 600px;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .login-section {
+        display: none;
+    }
+
+    .mobile-form {
+        display: flex;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        color: var(--dark-blue-green);
+    }
+
+    .bank-name {
+        font-size: 20px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 444px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .check-details {
+        align-items: center;
+    }
+}
