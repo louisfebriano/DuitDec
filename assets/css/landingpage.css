@@ -214,14 +214,14 @@ body.no-scroll {
 #features-section {
     display: flex;
     justify-content: space-between;
-    margin: 20px auto;
+    margin: 100px auto;
     width: 90%;
-    max-width: 1920px; 
-    margin-top: 100px;
+    max-width: 1920px;
     background-color: #fdfcfc;
     color: #192227;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
     
     opacity: 0;
     transform: translateY(20px);
@@ -263,4 +263,106 @@ h2 {
 .feature p {
     font-size: 1.2rem;
     color: #192227;
+}
+
+/* Testimonial Section */
+#testimonial-section {
+    background-color: #fdfcfc;
+    color: #192227;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#testimonial-section h2 {
+    font-size: 2.5rem;
+    color: #f9a600;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #192227;
+    color: #fdfcfc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #f9a600;
+}
+
+/* Footer Section */
+#footer {
+    background-color: #192227;
+    color: #fdfcfc;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f9a600;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-list li {
+    margin: 0 15px;
+}
+
+.footer-list a {
+    color: #fdfcfc;
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    color: #f9a600;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    color: #fdfcfc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    color: #f9a600;
 }
