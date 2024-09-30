@@ -6,7 +6,7 @@
     <title>DuitDec Registration Page</title>
     <link rel="stylesheet" href="/assets/css/login-registerpage.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/assets/js/loginpage.js"></script>
+    <script src="/assets/js/registerpage.js"></script>
 </head>
 <body>
     <div class="container">
@@ -33,7 +33,7 @@
                 <input type="email" placeholder="Email" required>
                 <input type="password" placeholder="Password" required>
                 <input type="password" placeholder="Confirm Password" required>
-                <button type="submit">Register</button>
+                <button type="button" onclick="register()">Register</button>
             </form>
         </div>
         <div class="mobile-form">
@@ -54,7 +54,7 @@
                     <h2 for="confirmPassword">Confirm Password:</h2>
                     <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
                 </div>
-                <button type="submit">Register</button>
+                <button type="button" onclick="register()">Register</button>
             </form>
         </div>
         <div class="switch">
