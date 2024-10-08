@@ -1,0 +1,102 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 85px;
+    margin-top: 100px; 
+}
+
+.card-summary {
+    display: flex;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: white;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.summary-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.account-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px; 
+    margin: 20px auto; 
+}
+
+.card-acc {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.acc-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.account-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
