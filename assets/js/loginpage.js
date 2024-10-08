@@ -3,8 +3,12 @@ function login() {
   const password = $('input[placeholder="Password"]').val();
 
   if (email === "" || password === "") {
-    alert("Please fill out both fields.");
-    return;
+      Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Please fill out both fields!",
+      });
+      return; 
   }
 
   window.location.href = "/pages/dashboard.html";

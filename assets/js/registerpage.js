@@ -10,13 +10,21 @@ function register() {
     password === "" ||
     confirmPassword === ""
   ) {
-    alert("Please fill out all fields.");
-    return;
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please fill out both fields!",
+  });
+  return; 
   }
 
   if (password !== confirmPassword) {
-    alert("Passwords do not match.");
-    return;
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Password does not matched",
+  });
+  return; 
   }
 
   window.location.href = "/pages/loginpage.html";
