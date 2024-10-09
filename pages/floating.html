@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Modal</title>
+    <link rel="stylesheet" href="/assets/css/floating.css">
+</head>
+<body>
+
+    <div class="floating-buttons">
+        <button id="addButton" class="floating-button add">+</button>
+        <button id="subtractButton" class="floating-button subtract">−</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content slide-in-v" style="animation: slideInV 0.5s forwards;">
+            <h2 id="modal-title">New Income</h2>
+            
+            <form id="transactionForm">
+                <label for="category">Category</label>
+                <div class="input-row">
+                    <select id="category" name="category">
+                        <option value="entertainment">Entertainment</option>
+                        <option value="food">Food</option>
+                        <option value="travel">Travel</option>
+                    </select>
+                </div>
+    
+                <label for="value">Value ($)</label>
+                <input type="number" id="value" name="value" required>
+                
+                
+                <label for="account">Account</label>
+                <select id="account" name="account">
+                    <option value="wallet">Wallet</option>
+                    <option value="bankAccount">Bank Account</option>
+                </select>
+    
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" required>
+    
+                <label for="from">From (Optional)</label>
+                <input type="text" id="from" name="from">
+    
+                <label for="notes">Notes (Optional)</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+    
+                <div class="button-row">
+                    <button type="button" id="cancelButton" class="cancel-button">CANCEL</button>
+                    <button type="submit" class="save-button">SAVE</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="/assets/js/floating.js"></script>
+</body>
+</html>
