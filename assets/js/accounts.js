@@ -10,7 +10,8 @@ function toggleVisibility(amountId, icon) {
         icon.textContent = 'visibility_off'; 
     }
 }
-//sidebar
+
 $(document).ready(function() {
     $('#sidebarContainer').load('/pages/sidebar.html');
+    $('#floating-buttons').load('/pages/floating.html');
 });
