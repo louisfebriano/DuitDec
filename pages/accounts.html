@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/sidebar.css">
     <link rel="stylesheet" href="/assets/css/accounts.css">
@@ -11,22 +12,13 @@
     <title>Accounts</title>
 </head>
 <body>
+
     <div class="navbar">
         <div id="sidebarContainer"></div>
         <div class="navbar-title">
             <h1 style="align-items: center;">Accounts</h1>
         </div>
     </div>  
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        fetch('/pages/sidebar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('sidebarContainer').innerHTML = data;
-            });
-        });
-    </script>
 
     <div class="main-content">
         <div class="row">
@@ -78,7 +70,6 @@
             </div>
         </div>
     </div>
-</body>
     <script src="/assets/js/accounts.js"></script>
-
+</body>
 </html>
