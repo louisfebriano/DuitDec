@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgets</title>
+
+    <link rel="stylesheet" href="/assets/css/budgets.css">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/floating.css">
+
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    
+    <div class="navbar">
+        <div id="sidebarContainer"></div>
+        <div class="navbar-title">
+            <h1>Budgets</h1>
+        </div>
+    </div>    
+
+    <div class="main">
+        
+        <!-- Weekly Budget Card -->
+        <div class="budget-card">
+            <h2>WEEKLY BUDGETS</h2>
+            <div class="period highlight">Week 4 of August 2024</div>
+            <div class="category">
+                <span class="material-symbols-outlined icon">theaters</span>
+                <div class="details">
+                    <div class="category-title">Entertainment</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 27%;"></div>
+                    </div>
+                    <div class="amount-edit">
+                        <div class="amount">$8.00 / $30.00 <span class="percentage">(27%)</span></div>
+                        <button class="edit-btn">Edit</button>
+                    </div>
+                    <div class="residual">Residual amount: $22.00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monthly Budget Card -->
+        <div class="budget-card">
+            <h2>MONTHLY BUDGETS</h2>
+            <div class="period highlight">August 2024</div>
+
+            <div class="category">
+                <span class="material-symbols-outlined icon">restaurant</span>
+                <div class="details">
+                    <div class="category-title">Eating Out</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 30%;"></div>
+                    </div>
+                    <div class="amount-edit">
+                        <div class="amount">$29.50 / $100.00 <span class="percentage">(30%)</span></div>
+                        <button class="edit-btn">Edit</button>
+                    </div>
+                    <div class="residual">Residual amount: $70.50</div>
+                </div>
+            </div>
+
+            <div class="category">
+                <span class="material-symbols-outlined icon">local_gas_station</span>
+                <div class="details">
+                    <div class="category-title">Fuel</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 25%;"></div>
+                    </div>
+                    <div class="amount-edit">
+                        <div class="amount">$30.00 / $120.00 <span class="percentage">(25%)</span></div>
+                        <button class="edit-btn">Edit</button>
+                    </div>
+                    <div class="residual">Residual amount: $90.00</div>
+                </div>
+            </div>
+
+            <!-- Example of Over Budget -->
+            <div class="category">
+                <span class="material-symbols-outlined icon">shopping_cart</span>
+                <div class="details">
+                    <div class="category-title">Groceries</div>
+                    <div class="progress">
+                        <div class="progress-bar over-budget" style="width: 120%;"></div>
+                    </div>
+                    <div class="amount-edit">
+                        <div class="amount">$150.00 / $125.00 <span class="percentage">(120%)</span></div>
+                        <button class="edit-btn">Edit</button>
+                    </div>
+                    <div class="residual negative">Over budget by: -$25.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/assets/js/budgets.js"></script>
+</body>
+</html>

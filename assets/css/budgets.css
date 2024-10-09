@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.navbar-title h1 {
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 85px;
+    margin-top: 100px;
+}
+
+.budget-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 100px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.budget-card h2 {
+    margin-bottom: 10px;
+}
+
+.period {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.period.highlight {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon {
+    font-size: 50px;
+    color: #f9a600;
+    margin-right: 15px;
+}
+
+.details {
+    flex-grow: 1;
+    position: relative;
+}
+
+.category-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background-color: #4caf50;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.progress-bar.over-budget {
+    background-color: #f44336; /* Red for over budget */
+}
+
+.amount-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.amount {
+    font-size: 14px;
+    color: #333;
+}
+
+.percentage {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.percentage.over-budget {
+    color: #f44336; /* Red for over budget */
+}
+
+.residual {
+    font-size: 12px;
+    color: #888;
+}
+
+.residual.negative {
+    color: #f44336; /* Red for negative residual */
+    font-weight: bold;
+}
+
+.edit-btn {
+    background-color: #f9a600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.edit-btn:hover {
+    background-color: #f28b00;
+}
