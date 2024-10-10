@@ -9,8 +9,6 @@ $(window).on('load', function() {
     const $centerCard = $('#center-card');
     const $body = $('body'); 
 
-    $body.addClass('no-scroll');
-
     setTimeout(function() {
         $splashScreen.css({
             'opacity': '0',
