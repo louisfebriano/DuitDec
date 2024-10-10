@@ -1,0 +1,148 @@
+:root {
+    --dark-blue-green: #192227;
+    --orange: #f9a600;
+    --white: #fdfcfc;
+    --text-dark-gray: #555;
+    --light-background: #f8f2e4;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--light-background);
+    margin: 0;
+    color: var(--text-dark-gray);
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+    margin: 60px auto 0;
+    width: calc(100% - 14%);
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.settings-section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-left: 18%;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-blue-green);
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-item label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.setting-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.toggle-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+}
+
+.toggle-checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: var(--orange);
+}
+
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: var(--white);
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-label::after {
+    transform: translateX(25px);
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        width: calc(100% - 20px); 
+        padding: 10px;
+    }
+
+    .settings-section {
+        padding: 15px; 
+        margin-left: 18%;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .setting-item {
+        margin-bottom: 15px;
+    }
+
+    .setting-item label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .toggle-switch {
+        width: 18%;
+    }
+
+    .main-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .settings-section {
+        width: 100%;
+        padding: 10px;
+    }
+}
