@@ -27,7 +27,6 @@
         <!-- Weekly Budget Card -->
         <div class="budget-card">
             <h2>WEEKLY BUDGETS</h2>
-            <div class="period highlight">30 Aug 2024 - 5 Sep 2024</div>
             <div class="category">
                 <span class="material-symbols-outlined icon">theaters</span>
                 <div class="details">
@@ -47,12 +46,10 @@
         <!-- Monthly Budget Card -->
         <div class="budget-card">
             <h2>MONTHLY BUDGETS</h2>
-            <div class="period highlight">August 2024</div>
-
             <div class="category">
                 <span class="material-symbols-outlined icon">restaurant</span>
                 <div class="details">
-                    <div class="category-title">Eating Out</div>
+                    <div class="category-title">Food </div>
                     <div class="progress">
                         <div class="progress-bar" style="width: 30%;"></div>
                     </div>
@@ -141,7 +138,36 @@
             </form>
         </div>
     </div>
-    
+
+    <!-- Modal for Edit Budget -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span id="closeEditModal" class="close">&times;</span>
+            <h2>Edit Budget</h2>
+            <form id="editForm">
+                <label for="editValue">Value:</label>
+                <input type="number" id="editValue" name="value" required>
+  
+                <label for="editCategory">Category:</label>
+                <div class="input-row">
+                    <select id="editCategory" name="category">
+                        <option value="entertainment">Entertainment</option>
+                        <option value="food">Food</option>
+                        <option value="travel">Travel</option>
+                    </select>
+                </div>
+  
+                <label for="editAccount">Account:</label>
+                <select id="editAccount" name="account">
+                    <option value="wallet">Wallet</option>
+                    <option value="bank">Bank</option>
+                </select>
+  
+                <button type="submit" id="saveEdit">Save Changes</button>
+                <button type="button" id="deleteBudget" class="delete-btn">Delete</button>
+            </form>
+        </div>
+    </div>
 
     <script src="/assets/js/budgets.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
