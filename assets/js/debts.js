@@ -8,12 +8,12 @@ $(document).ready(function () {
     const budgetsContainer = $('.budgets-container');
 
     addButton.on('click', function () {
-        modalTitle.text('Add New Credit'); // Change title for Credit
+        modalTitle.text('Add New Credit'); 
         modal.show();
     });
 
     minButton.on('click', function () {
-        modalTitle.text('Add New Debt'); // Change title for Debt
+        modalTitle.text('Add New Debt'); 
         modal.show();
     });
 
@@ -21,9 +21,8 @@ $(document).ready(function () {
         modal.hide();
     });
 
-    // Handle form submission
     $('#debtCreditForm').on('submit', function (e) {
-        e.preventDefault(); // Prevent the form from submitting the traditional way
+        e.preventDefault(); 
         
         const person = $('#person').val();
         const amount = $('#amount').val();
@@ -32,7 +31,6 @@ $(document).ready(function () {
         const notes = $('#notes').val();
         const transactionType = modalTitle.text() === 'Add New Credit' ? 'credit' : 'debt';
         
-        // Create the new card based on transaction type
         const newCard = `
             <div class="budget-card">
                 <div class="budget-header">
@@ -55,9 +53,9 @@ $(document).ready(function () {
             </div>
         `;
 
-        budgetsContainer.append(newCard); // Add the new card to the container
-        modal.hide(); // Hide the modal after saving
-        $('#debtCreditForm')[0].reset(); // Reset the form fields
+        budgetsContainer.append(newCard); 
+        modal.hide(); 
+        $('#debtCreditForm')[0].reset(); 
     });
 });
 

@@ -8,7 +8,7 @@ body {
 }
 
 /* Main Content */
-.main-content {
+.main {
     display: flex;
     width: 100%;
     margin-left: 85px;
@@ -196,7 +196,7 @@ body {
 }
 
 .subtract {
-    background-color: #dc3545; /* Red for subtract */
+    background-color: #dc3545;
 }
 
 .subtract:hover {
@@ -308,29 +308,30 @@ button {
         flex-direction: column;
     }
 
-    .main-content {
-        flex-direction: column; /* Stack elements on smaller screens */
+    .main {
+        margin-left: 50px;
+        flex-direction: column; 
     }
 
     .filter-container {
-        width: 100%; /* Full width */
-        max-width: none; /* Remove max-width for smaller screens */
+        width: 100%; 
+        max-width: none; 
     }
 
     .budgets-container {
-        margin-top: 20px; /* Add spacing on smaller screens */
+        margin-top: 20px; 
     }
 
     .modal-content {
-        width: 90%; /* Make modal wider on small screens */
+        width: 90%; 
     }
 
     .floating-buttons {
-        bottom: 10px; /* Adjust button position */
+        bottom: 10px; 
     }
 
     .budget-card {
-        margin: 10px 0; /* Adjust spacing between cards */
+        margin: 10px 0; 
     }
 }
 

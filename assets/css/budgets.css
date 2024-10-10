@@ -21,16 +21,16 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 100px auto; /* Centering the main content */
-  padding: 0 20px; /* Add padding for mobile */
-  max-width: 1200px; /* Limit max width for larger screens */
+  margin: 100px auto; 
+  padding: 0 20px; 
+  max-width: 1200px;
 }
 
 .budget-card {
   background-color: white;
   border-radius: 8px;
   padding: 20px;
-  margin: 10px 0; /* Adjusted margin for vertical spacing */
+  margin: 10px 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -169,7 +169,7 @@ body {
   margin: 5% auto;
   padding: 20px;
   border-radius: 8px;
-  width: 90%; /* Adjusted for mobile view */
+  width: 90%;
   max-width: 600px;
   max-height: 80vh;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -255,19 +255,19 @@ button {
   }
 
   .modal-content {
-    width: 90%; /* Full width modal on small screens */
+    width: 90%; 
   }
 
   .navbar {
-    padding: 10px; /* Adjust navbar padding */
+    padding: 10px; 
   }
 
   .icon {
-    font-size: 40px; /* Smaller icons on mobile */
+    font-size: 40px; 
   }
 
   button {
-    padding: 8px 12px; /* Adjust button size for mobile */
+    padding: 8px 12px; 
   }
 }
 
