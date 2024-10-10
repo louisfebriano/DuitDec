@@ -17,8 +17,14 @@ h1 {
 .main-content {
   display: flex;
   padding: 20px;
+  padding-left: 8%; /* Adjust left padding for wider screens */
   margin-top: 60px;
+  margin-left: auto; /* Center the content horizontally */
+  margin-right: auto;
+  width: 95%; /* Use a higher percentage or fixed width to expand the layout */
+  max-width: 1400px; /* Set a maximum width to prevent it from getting too wide on very large screens */
   gap: 20px;
+  min-height: calc(100vh - 80px);
 }
 
 .filter-section {
@@ -26,15 +32,20 @@ h1 {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 300px;
+  width: 350px;
+  height: fit-content;
+  align-self: flex-start;
 }
 
 .filter-title {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
+  padding-bottom: 10px;
   color: #192227;
-}Z
+  border-bottom: 1px dashed var(--text-dark-gray);
+  text-align: center;
+}
 
 .filter-item input,
 .filter-item select {
@@ -70,7 +81,10 @@ h1 {
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  width: 750px;
+  width: 100%; /* Allow it to take up the full width */
+  max-width: 1200px; /* Increase the max-width to make it wider */
+  display: flex;
+  flex-direction: column;
 }
 
 .transaction-header {
@@ -78,6 +92,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  border-bottom: 1px dashed var(--text-dark-gray);
 }
 
 .transaction-header h3 {
@@ -98,8 +113,9 @@ h1 {
 }
 
 .transactions-list {
-  max-height: 450px;
+  flex-grow: 1;
   overflow-y: auto;
+  max-height: calc(100vh - 250px);
 }
 
 .transaction-item {
@@ -113,16 +129,6 @@ h1 {
 
 .transaction-item:hover {
   background-color: #f8f8f8;
-}
-
-.transaction-icon {
-  width: 45px;
-  height: 45px;
-  background-color: #ecf0f1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
 }
 
 .transaction-details {
@@ -160,7 +166,8 @@ h1 {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   position: relative;
   margin-top: 150px;
-  margin-left: 500px;
+  margin-left: auto;
+  margin-right: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -181,12 +188,8 @@ h1 {
   color: #333;
 }
 
-.form-item {
-  margin-bottom: 15px;
-}
-
 .submit-button {
-  background-color:  #27ae60;
+  background-color: #27ae60;
   color: white;
   padding: 10px;
   border: none;
@@ -202,73 +205,82 @@ h1 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.form-item {
-  margin-bottom: 15px;
-}
-
-.icon-input {
+.icon-positive {
+  background-color: #4CAF50;
+  color: white; 
+  border-radius: 50%; 
+  padding: 10px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-size: 25px;
 }
 
-.icon-input select,
-.icon-input input {
-  flex-grow: 1;
+.icon-negative {
+  background-color: #F44336; 
+  color: white;
+  border-radius: 50%;
   padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-left: 10px;
-}
-
-.value-input {
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  font-size: 25px;
 }
 
-.value-input input {
-  flex-grow: 1;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .main-content {
+    padding-left: 10%; /* Adjust padding for smaller screens */
+  }
 }
 
-.value-input span {
-  margin-left: 10px;
-  font-weight: bold;
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    margin-left: 0;
+    padding-left: 18%;
+  }
+
+  .filter-section,
+  .transaction-section {
+    width: 100%; /* Make both sections take up full width on smaller screens */
+  }
+
+  .transaction-section {
+    margin-left: 0;
+  }
+
+  .modal-content-transaction {
+    width: 100px;
+  }
 }
 
-.form-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
+@media (max-width: 480px) {
+  .main-content {
+    padding-left: 25%; /* Adjust left padding for mobile screens */
+  }
 
-.save-button,
-.save-plus-button,
-.cancel-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  .filter-section,
+  .transaction-section {
+    padding: 15px;
+    width: 100%; /* Full-width for very small screens */
+  }
 
-.save-button,
-.save-plus-button {
-  background-color: #4caf50;
-  color: white;
-}
+  .transactions-list {
+    max-height: calc(100vh - 400px);
+  }
 
-.save-button:hover,
-.save-plus-button:hover {
-  background-color: #45a049;
-}
+  .floating-button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
 
-.cancel-button {
-  background-color: #f44336;
-  color: white;
-}
-
-.cancel-button:hover {
-  background-color: #d73833;
+  .modal-content-transaction {
+    padding: 10px;
+  }
 }
