@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/settings.css" />
+    <link rel="stylesheet" href="/assets/css/sidebar.css" />
+    <link rel="stylesheet" href="/assets/css/floating.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="/assets/js/settings.js"></script>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("/pages/sidebar.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("sidebarContainer").innerHTML = data;
+            });
+        });
+    </script>
+    <header class="navbar">
+        <div id="sidebarContainer" class="sidebar"></div>
+        <div class="navbar-title">
+            <h1>Settings</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="settings-section">
+            <h3 class="section-title">Preferences</h3>
+
+            <div class="setting-item">
+                <label for="language-select">Language</label>
+                <select id="language-select" class="setting-select">
+                    <option value="en">English</option>
+                    <option value="id">Indonesian</option>
+                    <option value="fr">French</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <label for="currency-select">Currency</label>
+                <select id="currency-select" class="setting-select">
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
+                    <option value="IDR">IDR (Rp)</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <label for="theme-select">Theme</label>
+                <select id="theme-select" class="setting-select">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+
+            <div class="setting-item toggle-item">
+                <label for="notifications-toggle">Notifications</label>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="notifications-toggle" class="toggle-checkbox">
+                    <label class="toggle-label" for="notifications-toggle"></label>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,32 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-.body{
+body {
     overflow-x: hidden;
     max-width: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Main Content */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
+    width: calc(100% - 85px); /* Adjust for sidebar */
     margin-left: 85px;
-    margin-top: 56px;       
+    margin-top: 56px;
 }
 
-/* Row Style */
-.row{
+.row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2.5rem;
+    padding: 1rem; /* Reduced padding for responsiveness */
     flex-wrap: wrap;
     width: 100%;
-    padding-bottom: 0px;
 }
-
-
 
 /* Card Styles */
 .card {
@@ -35,18 +39,27 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 17px;
-    padding: 23px;
+    padding: 20px; /* Reduced padding for better fit */
+    flex: 1 1 calc(33% - 20px); /* 3 cards per row on larger screens */
+    margin: 10px; /* spacing between cards */
+    overflow: hidden; /* Prevent text overflow */
+    display: flex;
+    flex-direction: column; /* Ensure card content stacks vertically */
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 16px; /* Increased font size for better visibility */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Ellipsis for long text */
+    white-space: nowrap; /* Prevent wrapping */
 }
 
-.card-content{
+.card-content {
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
     justify-content: space-between;
-    width: 260px;
     flex-wrap: wrap;
-    flex-direction: row;
     z-index: 1;
 }
 
@@ -56,11 +69,6 @@
     flex-direction: row;
     gap: 10px;
     text-align: left;
-}
-
-.card h3{
-    margin-bottom: 12px;
-    font-size: 15px;
 }
 
 .donut-chart {
@@ -101,17 +109,17 @@
 }
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    
     .main-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
+        padding: 10px; 
+
     }
 
+    .row {
+        padding: 0;     }
+
     .card {
-        max-width: 100%;
+        flex: 1 1 100%; /* 1 card per row on small screens */
         margin-bottom: 20px;
     }
 
@@ -121,28 +129,28 @@
     }
 }
 
-
 @keyframes slideInV {
     from {
-      transform: translateY(-100%);
+        transform: translateY(-100%);
     }
     to {
-      transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
 @keyframes slideInH {
     from {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
     to {
-      transform: translateX(0);
+        transform: translateX(0);
     }
 }
-  
+
 .slide-in-v {
     transform: translateY(-150%);
 }
+
 .slide-in-h {
     transform: translateX(-150%);
 }

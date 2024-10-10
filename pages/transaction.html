@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transactions</title>
@@ -9,131 +9,124 @@
     <link rel="stylesheet" href="/assets/css/sidebar.css" />
     <link rel="stylesheet" href="/assets/css/floating.css" />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
     />
     <script src="/assets/js/transaction.js"></script>
-  </head>
-  <body>
+</head>
+<body>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
         fetch("/pages/sidebar.html")
-          .then((response) => response.text())
-          .then((data) => {
+        .then((response) => response.text())
+        .then((data) => {
             document.getElementById("sidebarContainer").innerHTML = data;
-          });
-      });
+        });
+    });
     </script>
 
     <div class="floating-buttons">
-      <button id="add-income-button" class="floating-button add">+</button>
-      <button id="add-expense-button" class="floating-button subtract">−</button>
+        <button id="add-income-button" class="floating-button add">+</button>
+        <button id="add-expense-button" class="floating-button subtract">−</button>
     </div>
 
     <header class="navbar">
-      <div id="sidebarContainer" class="sidebar"></div>
-      <div class="navbar-title">
-        <h1>Transactions</h1>
-      </div>
+        <div id="sidebarContainer" class="sidebar"></div>
+        <div class="navbar-title">
+            <h1>Transactions</h1>
+        </div>
     </header>
 
     <main class="main-content">
-      <aside class="filter-section">
-        <h3 class="filter-title">FILTER</h3>
-        <div class="filter-item">
-          <label for="category-filter">Category</label>
-          <select id="category-filter" aria-label="Category Filter">
-            <option value="">All Categories</option>
-            <optgroup label="Income Categories">
-              <option value="Salary">Salary</option>
-              <option value="Bonus">Bonus</option>
-              <option value="Interest">Interest</option>
-              <option value="Gifts">Gifts</option>
-              <option value="Investments">Investments</option>
-            </optgroup>
-            <optgroup label="Expense Categories">
-              <option value="Food">Food</option>
-              <option value="Entertainment">Entertainment</option>
-              <option value="Shopping">Shopping</option>
-              <option value="Fuel">Fuel</option>
-              <option value="Others">Others</option>
-            </optgroup>
-          </select>
-        </div>
-        <div class="filter-item date-filter">
-          <label for="from-date">From</label>
-          <input type="date" id="from-date" aria-label="From Date" />
-          <label for="to-date">To</label>
-          <input type="date" id="to-date" aria-label="To Date" />
-        </div>
-        <button class="filter-button apply-filter" id="apply-filter-button">
-          Apply Filter
-        </button>
-      </aside>
+        <aside class="filter-section">
+            <h3 class="filter-title">FILTER</h3>
+            <div class="filter-item">
+                <label for="category-filter">Category</label>
+                <select id="category-filter" aria-label="Category Filter">
+                    <option value="">All Categories</option>
+                    <optgroup label="Income Categories">
+                        <option value="Salary">💼 Salary</option>
+                        <option value="Bonus">🎁 Bonus</option>
+                        <option value="Interest">💰 Interest</option>
+                        <option value="Gifts">🎉 Gifts</option>
+                        <option value="Investments">📈 Investments</option>
+                    </optgroup>
+                    <optgroup label="Expense Categories">
+                        <option value="Food">🍽️ Food</option>
+                        <option value="Entertainment">🎬 Entertainment</option>
+                        <option value="Shopping">🛍️ Shopping</option>
+                        <option value="Fuel">⛽ Fuel</option>
+                        <option value="Others">🔧 Others</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="filter-item date-filter">
+                <label for="from-date">From</label>
+                <input type="date" id="from-date" aria-label="From Date" />
+                <label for="to-date">To</label>
+                <input type="date" id="to-date" aria-label="To Date" />
+            </div>
+            <button class="filter-button apply-filter" id="apply-filter-button">
+                Apply Filter
+            </button>
+        </aside>
 
-      <section class="transaction-section">
-        <header class="transaction-header">
-          <h3>October 2024</h3>
-          <div class="total-amount-container">
-            <span>Total: </span>
-            <span class="total-amount negative" id="total-amount"> $0.00</span>
-          </div>
-        </header>
-        <div class="transactions-list" id="transactions-list"></div>
-      </section>
+        <section class="transaction-section">
+            <header class="transaction-header">
+                <h3>HISTORY</h3>
+                <div class="total-amount-container">
+                    <span>Total: </span>
+                    <span class="total-amount negative" id="total-amount"> $0.00</span>
+                </div>
+            </header>
+            <div class="transactions-list" id="transactions-list"></div>
+        </section>
     </main>
 
     <div id="add-transaction-modal" class="modal-transaction" aria-hidden="true">
-      <div class="modal-content">
-        <span class="close" role="button" aria-label="Close">&times;</span>
-        <h2 id="modal-title">Add Transaction</h2>
-        <form id="add-transaction-form">
-          <div class="form-item">
-            <label for="transaction-category">Category</label>
-            <select
-              id="transaction-category"
-              required
-              aria-label="Transaction Category"
-            >
-              <option value="">Select Category</option>
-            </select>
-          </div>
-          <div class="form-item">
-            <label for="transaction-amount">Amount</label>
-            <input
-              type="number"
-              id="transaction-amount"
-              placeholder="Amount"
-              required
-              aria-label="Transaction Amount"
-            />
-          </div>
-          <div class="form-item">
-            <label for="transaction-date">Date</label>
-            <input
-              type="date"
-              id="transaction-date"
-              required
-              aria-label="Transaction Date"
-            />
-          </div>
-          <div class="form-item">
-            <label for="transaction-notes">Notes</label>
-            <input
-              type="text"
-              id="transaction-notes"
-              placeholder="Notes"
-              aria-label="Transaction Notes"
-            />
-          </div>
-          <button type="submit" class="submit-button">Add Transaction</button>
-        </form>
-      </div>
+        <div class="modal-content">
+            <span class="close" role="button" aria-label="Close">&times;</span>
+            <h2 id="modal-title">Add Transaction</h2>
+            <form id="add-transaction-form">
+                <div class="form-item">
+                    <label for="transaction-category">Category</label>
+                    <select id="transaction-category" required aria-label="Transaction Category">
+                        <option value="">Select Category</option>
+                        <optgroup label="Income Categories">
+                            <option value="Salary">💼 Salary</option>
+                            <option value="Bonus">🎁 Bonus</option>
+                            <option value="Interest">💰 Interest</option>
+                            <option value="Gifts">🎉 Gifts</option>
+                            <option value="Investments">📈 Investments</option>
+                        </optgroup>
+                        <optgroup label="Expense Categories">
+                            <option value="Food">🍽️ Food</option>
+                            <option value="Entertainment">🎬 Entertainment</option>
+                            <option value="Shopping">🛍️ Shopping</option>
+                            <option value="Fuel">⛽ Fuel</option>
+                            <option value="Others">🔧 Others</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="transaction-amount">Amount</label>
+                    <input type="number" id="transaction-amount" placeholder="Amount" required aria-label="Transaction Amount" />
+                </div>
+                <div class="form-item">
+                    <label for="transaction-date">Date</label>
+                    <input type="date" id="transaction-date" required aria-label="Transaction Date" />
+                </div>
+                <div class="form-item">
+                    <label for="transaction-notes">Notes</label>
+                    <input type="text" id="transaction-notes" placeholder="Notes" aria-label="Transaction Notes" />
+                </div>
+                <button type="submit" class="submit-button">Add Transaction</button>
+            </form>
+        </div>
     </div>
-    </div>
-  </body>
+</body>
 </html>

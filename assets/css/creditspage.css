@@ -1,0 +1,83 @@
+.main-content {
+    padding: 20px;
+}
+
+.amount-due-container {
+    margin-top:70px;
+    text-align: right;
+    margin-bottom: 20px;
+    min-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    border-radius: 17px;
+}
+
+.amount-due-label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.amount-due-value {
+    color: red;
+}
+
+.credit-card-info {
+    width: 900px;
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 17px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.credit-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.progress {
+    background-color: #28a745;
+    height: 100%;
+}
+
+.credit-details {
+    list-style-type: none;
+    padding: 0;
+}
+
+.credit-details li {
+    margin: 5px 0;
+}
+
+.next-payment {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions .icon-btn {
+    background-color: #f8f9fa;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 5px;
+}

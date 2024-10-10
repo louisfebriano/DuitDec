@@ -22,60 +22,90 @@
     </div>  
 
     <div class="main-content">
-        <div id="floating-buttons"></div>
+        <div id="floating-buttons">
+            <button id="add-wallet" class="floating-button" style="position: fixed; bottom: 20px; right: 20px; background-color: green; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 30px; cursor: pointer;">
+                +
+            </button>
+        </div>
+
+        <div id="wallet-modal" class="modal" style="display: none;">
+            <div class="modal-content slide-in-v" style="animation: slideInV 0.5s forwards;">
+                <span class="close-button">&times;</span>
+                <h2>Add Wallet</h2>
+                <form id="wallet-form">
+                    <label for="wallet-name">Wallet Name:</label>
+                    <input type="text" id="wallet-name" name="wallet-name" required>
+        
+                    <label for="wallet-amount">Amount:</label>
+                    <input type="number" id="wallet-amount" name="wallet-amount" step="0.01" required>
+        
+                    <button type="submit">Add Wallet</button>
+                </form>
+            </div>
+        </div>
+
+            
         <div class="row">
-            <div class="card-summary">
+            <div class="card-summary slide-in-h" style="animation: slideInH 1s forwards;">
                 <div class="summary-title">
                     <p><span class="material-symbols-outlined" id="dropdown-button" style="cursor: pointer;">arrow_drop_down</span></p>
-                    <p>Total: <span style="color: #3dbd2e;" id="total-amount">$13,627.71</span></p>
+                    <p>Total: <span style="color: #3dbd2e;" id="total-amount">$8,827.71</span></p>
                 </div>
-
+    
                 <div class="chart" id="chart-container" style="display: none;">
                     <canvas class="donut-chart" id="chart"></canvas>
                 </div>
             </div>
         </div>
-
+    
         <div class="account-cards">
-            <div class="card-acc">
+            <div class="card-acc slide-in-h" style="animation: slideInH 1.0s forwards; animation-delay: 0.5s;" data-amount="5290.24">
                 <div class="acc-title">
                     <p>Wallet</p>
-                    <p class="amount" id="wallet-amount" style="color: #3dbd2e;">$90.24</p>
+                    <p class="amount" id="wallet-amount" style="color: #3dbd2e;">$5,290.24</p>
                 </div>
                 <div class="acc-content">
                     <div class="account-options">
                         <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input type="checkbox" class="toggle-account" checked>
                             <span class="slider"></span>
                         </label>
                         <span class="material-symbols-outlined" style="cursor: pointer;" 
                               onclick="toggleVisibility('wallet-amount', this)">
                             visibility
                         </span>
+                        <span class="material-symbols-outlined" style="cursor: pointer; color: red;" 
+                              onclick="deleteCard(this)">
+                            delete
+                        </span>
                     </div>
                 </div>
             </div>
-
-            <div class="card-acc">
+    
+            <div class="card-acc slide-in-h" style="animation: slideInH 1.0s forwards; animation-delay: 1s;" data-amount="3537.47">
                 <div class="acc-title">
                     <p>Bank account</p>
-                    <p class="amount" id="bank-amount" style="color: #3dbd2e;">$13,537.47</p>
+                    <p class="amount" id="bank-amount" style="color: #3dbd2e;">$3,537.47</p>
                 </div>
                 <div class="acc-content">
                     <div class="account-options">
                         <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input type="checkbox" class="toggle-account" checked>
                             <span class="slider"></span>
                         </label>
                         <span class="material-symbols-outlined" style="cursor: pointer;" 
                               onclick="toggleVisibility('bank-amount', this)">
                             visibility
                         </span>
+                        <span class="material-symbols-outlined" style="cursor: pointer; color: red;" 
+                              onclick="deleteCard(this)">
+                            delete
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
     
     <script src="/assets/js/accounts.js"></script>
 </body>
