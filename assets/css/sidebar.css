@@ -91,7 +91,7 @@ body {
 }
 
 .sidebar-links h4 {
-  color: #192227; /* Change to black */
+  color: #192227;
   font-weight: 500;
 }
 
@@ -304,23 +304,23 @@ body {
 
   .sidebar {
     padding: 15px 5px;
-    width: 55px; /* Collapsed width */
+    width: 55px;
   }
 
   .sidebar:hover {
-    width: 200px; /* Expanded width on hover */
+    width: 200px;
   }
 
   .navbar {
-    padding-left: 70px; /* Adjust navbar padding */
+    padding-left: 70px; 
   }
 
   .sidebar .sidebar-header h2 {
-    display: none; /* Hide title on smaller screens */
+    display: none;
   }
 
   .sidebar-links h4 {
-    display: none; /* Hide labels on smaller screens */
+    display: none;
   }
 
   .sidebar-links li a:hover {
@@ -333,15 +333,15 @@ body {
   }
 
   .user-profile img {
-    width: 36px; /* Adjust image size for mobile */
+    width: 36px; 
   }
 
   .user-profile h3,
   .user-profile span {
-    display: none; /* Hide user info on mobile */
+    display: none; 
   }
 
   .user-account {
-    padding: 5px 0; /* Adjust padding for user account */
+    padding: 5px 0;
   }
 }
