@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/budgets.css">
     <link rel="stylesheet" href="/assets/css/sidebar.css">
 
+    
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -127,7 +128,7 @@
                 <label for="period">Period</label>
                 <select id="period" name="period">
                     <option value="bankAccount">Week</option>
-                    <option value="wallet">Montht</option>
+                    <option value="wallet">Month</option>
                 </select>
                 
                 <label for="date">Date Start</label>
@@ -135,12 +136,14 @@
             
                 <div class="button-row">
                     <button type="button" id="cancelButton" class="cancel-button">CANCEL</button>
-                    <button type="submit" class="save-button">SAVE</button>
+                    <button type="submit" id="save-button"class="save-button">SAVE</button>
                 </div>
             </form>
         </div>
     </div>
     
+
     <script src="/assets/js/budgets.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>
