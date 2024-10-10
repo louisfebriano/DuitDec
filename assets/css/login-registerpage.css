@@ -47,14 +47,14 @@ body {
     height: 50px;
     width: auto;
     margin-right: 10px;
-    animation: fadeIn 1s ease-in-out forwards 0.3s;
+    animation: fadeIn 0.5s ease-in-out forwards 0.3s;
 }
 
 .logo-name {
     display: flex; 
     align-items: center;
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards 0.3s;
+    animation: fadeIn 0.5s ease-in-out forwards 0.3s;
 }
 
 .bank-name {
@@ -62,14 +62,14 @@ body {
     font-weight: bold;
     color: var(--dark-blue-green);
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards 0.5s;
+    animation: fadeIn 0.5s ease-in-out forwards 0.5s;
 }
 
 .form-title {
     font-size: 24px;
     color: var(--dark-blue-green);
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards 0.7s;
+    animation: fadeIn 0.5s ease-in-out forwards 0.7s;
 }
 
 .check-details {
@@ -79,7 +79,7 @@ body {
     font-size: 14px;
     color: var(--text-dark-gray);
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards 1s;
+    animation: fadeIn 0.5s ease-in-out forwards 1s;
 }
 
 .check-no, .check-date {
@@ -95,7 +95,7 @@ body {
     display: flex; 
     flex-direction: column;
     width: 120px;
-    animation: slideIn 1s ease-in-out forwards 1.3s;
+    animation: slideIn 0.5s ease-in-out forwards 1.3s;
     opacity: 0;
 }
 
@@ -122,7 +122,7 @@ form {
     flex-direction: column;
     gap: 15px;
     flex-grow: 1;
-    animation: slideIn 1s ease-in-out forwards 1.6s;
+    animation: slideIn 0.5s ease-in-out forwards 1.6s;
     opacity: 0;
 }
 
@@ -149,7 +149,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
     opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards 1.9s;
+    animation: fadeIn 0.5s ease-in-out forwards 1.9s;
 
 }
 
@@ -163,7 +163,7 @@ button:hover {
     margin-top: 16px;
     color: var(--dark-blue-green);
     opacity: 0;
-    animation: fadeIn 2.5s ease-in-out forwards 2.2s;
+    animation: fadeIn 0.5s ease-in-out forwards 2.2s;
 }
 
 .switch a {
