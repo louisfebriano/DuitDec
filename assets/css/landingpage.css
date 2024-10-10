@@ -165,9 +165,8 @@ body.no-scroll {
 }
 
 .sponsor-image {
-    width: 30%; 
-    height: 90px;
-    margin: 0 5px;
+    height: 100px;
+    margin: 0 100px;
     border-radius: 4px;
 }
 
