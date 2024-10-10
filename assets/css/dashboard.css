@@ -108,16 +108,15 @@ body {
     transition: width 0.5s ease;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .main-content {
-        padding: 10px; /* Add padding */
+        padding: 10px; 
 
     }
 
     .row {
-        padding: 0; /* Remove padding for rows */
-    }
+        padding: 0;     }
 
     .card {
         flex: 1 1 100%; /* 1 card per row on small screens */
