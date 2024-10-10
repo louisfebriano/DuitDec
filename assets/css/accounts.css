@@ -133,3 +133,29 @@ input:checked + .slider:before {
 .close-button:hover, .close-button:focus {
     color: black;
 }
+
+@keyframes slideInV {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInH {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-v {
+    transform: translateY(-150%);
+}
+
+.slide-in-h {
+    transform: translateX(-150%);
+}
