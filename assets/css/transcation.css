@@ -249,7 +249,7 @@ font-size: 25px;
 .main-content {
   flex-direction: column;
   margin-left: 0;
-  padding-left: 18%;
+  padding-left: 10%;
 }
 
 .filter-section,
@@ -268,7 +268,7 @@ font-size: 25px;
 
 @media (max-width: 480px) {
 .main-content {
-  padding-left: 25%; 
+  padding-left: 15%; 
 }
 
 .filter-section,
