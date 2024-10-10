@@ -2,14 +2,13 @@ $(document).ready(function () {
     let transactions = [];
     let totalAmount = 0;
 
-
-    const incomeCategories = ["Salary", "Bonus", "Interest", "Gifts", "Investments"];
-    const expenseCategories = ["Food", "Entertainment", "Shopping", "Fuel", "Others"];
+    const incomeCategories = ["💼 Salary", "🎁 Bonus", "💰 Interest", "🎉 Gifts", "📈 Investments"];
+    const expenseCategories = ["🍽️ Food", "🎬 Entertainment", "🛍️ Shopping", "⛽ Fuel", "🔧 Others"];
 
 
     function populateCategoryOptions(categories) {
         const $categorySelect = $("#transaction-category");
-        $categorySelect.empty(); 
+        $categorySelect.empty();
         $categorySelect.append('<option value="">Select Category</option>');
         categories.forEach((category) => {
             $categorySelect.append(`<option value="${category}">${category}</option>`);
@@ -53,10 +52,10 @@ $(document).ready(function () {
 
         if (isIncome) {
             transactions.push({ category, amount, date, notes, type: "income" });
-            totalAmount += amount; 
+            totalAmount += amount;
         } else {
             transactions.push({ category, amount, date, notes, type: "expense" });
-            totalAmount -= amount; 
+            totalAmount -= amount;
         }
 
         updateTransactionList(transactions);
@@ -65,7 +64,7 @@ $(document).ready(function () {
     }
 
     function applyFilters() {
-        const categoryFilter = $("#category-filter").val(); 
+        const categoryFilter = $("#category-filter").val();
         const fromDate = $("#from-date").val();
         const toDate = $("#to-date").val();
 
@@ -88,21 +87,24 @@ $(document).ready(function () {
 
     function updateTransactionList(transactionsToShow) {
         const $list = $("#transactions-list");
-        $list.empty(); 
+        $list.empty();
 
         transactionsToShow.forEach((transaction) => {
-            const icon = transaction.type === "income" ? "💵" : "💰";
+            const icon = transaction.type === "income" ? "+" : "-";
             const amountClass = transaction.type === "income" ? "positive" : "negative";
-
+            const iconClass = transaction.type === "income" ? "icon-positive" : "icon-negative"; 
+            
             const $item = $(`
                 <div class="transaction-item ${amountClass}">
-                    <div class="transaction-icon">${icon}</div>
+                    <div class="transaction-icon ${iconClass}">${icon}</div>
                     <div class="transaction-details">
                         <p>${transaction.category}</p>
                         <p>${transaction.notes}</p>
                     </div>
                     <div class="transaction-right">
-                        <div class="amount ${amountClass}">${transaction.type === "income" ? `$${transaction.amount.toFixed(2)}` : `-$${transaction.amount.toFixed(2)}`}</div>
+                        <div class="amount ${amountClass}">
+                            ${transaction.type === "income" ? `$${transaction.amount.toFixed(2)}` : `-$${transaction.amount.toFixed(2)}`}
+                        </div>
                         <div class="date">${transaction.date}</div>
                     </div>
                 </div>
