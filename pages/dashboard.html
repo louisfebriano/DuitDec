@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="/assets/css/dashboard.css">
     <link rel="stylesheet" href="/assets/css/sidebar.css">
     <link rel="stylesheet" href="/assets/css/floating.css">
-
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     
@@ -21,96 +19,91 @@
         </div>
     </div>    
     
-    
     <div class="main-content">
         <div id="floating-buttons"></div>
         <div class="row">
-            <div class="card slide-in-v" style="flex-direction: column; 
-            animation: slideInV 0.5s forwards;" >
+            <div class="card slide-in-v" style="animation: slideInV 0.5s forwards;">
                 <div class="card-title">
                     <h3>Summary</h3>
                 </div>
                 <div class="card-content">
                     <div class="card-container">
                         <p>Balance:</p>
-                        <p class="positive">$123.123,12</p>
+                        <p class="positive">$123,123.12</p>
                     </div>
                     <div class="card-container">
                         <p>Credit Cards:</p>
-                        <p class="negative">-$11.111,11</p>
+                        <p class="negative">-$11,111.11</p>
                     </div>
                     <hr>
-                    <p style="display: flex; justify-content: end;" class="positive">
-                        $123.123.123,00
+                    <p class="positive" style="text-align: end;">
+                        $123,123,123.00
                     </p>
                 </div>
             </div>
-        
-        <div class="card slide-in-v" style="animation: slideInV 1s forwards;">
-            <div style="display: flex;">
 
-                <canvas class="donut-chart" id="chart-this-month"></canvas>
-                <div class="card-content" style="margin-left: 20px;">
-                    <h3>This Month</h3>
-                    <div class="card-container">
-                        <p>Income:</p>
-                        <p class="positive">$1,500.00</p>
+            <div class="card slide-in-v" style="animation: slideInV 1s forwards;">
+                <div class="row-content">
+                    <canvas class="donut-chart" id="chart-this-month"></canvas>
+                    <div class="card-content">
+                        <h3>This Month</h3>
+                        <div class="card-container">
+                            <p>Income:</p>
+                            <p class="positive">$1,500.00</p>
+                        </div>
+                        <div class="card-container">
+                            <p>Outcome:</p>
+                            <p class="negative">-$396.76</p>
+                        </div>
+                        <hr>
+                        <p class="positive" style="text-align: end;">
+                            $1,103.24
+                        </p>
                     </div>
-                    <div class="card-container">
-                        <p>Outcome:</p>
-                        <p class="negative">-$396.76</p>
+                </div>
+            </div>
+
+            <div class="card slide-in-v" style="animation: slideInV 1.5s forwards;">
+                <div class="row-content">
+                    <canvas class="donut-chart" id="chart-last-month"></canvas>
+                    <div class="card-content">
+                        <h3>Last Month</h3>
+                        <div class="card-container">
+                            <p>Income:</p>
+                            <p class="positive">$1,500.00</p>
+                        </div>
+                        <div class="card-container">
+                            <p>Outcome:</p>
+                            <p class="negative">-$396.76</p>
+                        </div>
+                        <hr>
+                        <p class="positive" style="text-align: end;">
+                            $1,103.24
+                        </p>
                     </div>
-                    <hr>
-                    <p style="display: flex; justify-content: end;" class="positive">
-                        $1,103.24</p>
                 </div>
             </div>
         </div>
 
-        <div class="card slide-in-v" style="animation: slideInV 1.5s forwards;">
-            <div style="display: flex;">
-
-                <canvas class="donut-chart" id="chart-last-month"></canvas>
-                <div class="card-content" style="margin-left: 20px;">
-                    <h3>Last Month</h3>
-                    <div class="card-container">
-                        <p>Income:</p>
-                        <p class="positive">$1,500.00</p>
-                    </div>
-                    <div class="card-container">
-                        <p>Outcome:</p>
-                        <p class="negative">-$396.76</p>
-                    </div>
-                    <hr>
-                    <p style="display: flex; justify-content: end;" class="positive">
-                        $1,103.24</p>
-                </div>
-            </div>
-        </div>
-        
         <div class="row">
-            <div class="card slide-in-h" style="width: 100%; flex-direction: column; 
-            animation: slideInH 1.5s forwards; animation-delay: 1s;">                
+            <div class="card slide-in-h" style="flex-direction: column; animation: slideInH 1.5s forwards; animation-delay: 1s;">
                 <h3>Accounts</h3>
                 <div class="card-container">
                     <p>Wallet</p>
                     <p class="positive">$90.24</p>
                 </div>
-                <p  style="display: flex; justify-content: end;">
-                    USD - $</p>
+                <p style="text-align: end;">USD - $</p>
                 <hr>
                 <div class="card-container">
                     <p>Bank Account</p>
                     <p class="positive">$13,534.24</p>
                 </div>
-                <p style="display: flex; justify-content: end;">
-                    USD - $</p>
+                <p style="text-align: end;">USD - $</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="card slide-in-h" style="width: 100%; flex-direction: column;
-            animation: slideInH 1.5s forwards; animation-delay: 1.5s;">
+            <div class="card slide-in-h" style="flex-direction: column; animation: slideInH 1.5s forwards; animation-delay: 1.5s;">
                 <h3>Credit Cards</h3>
                 <div class="card-container">
                     <p>Credit Card</p>
@@ -121,7 +114,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

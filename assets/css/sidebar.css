@@ -29,6 +29,7 @@ body {
   z-index: 900;
   padding-left: 85px;
 }
+
 .navbar-title {
   display: flex;
   text-align: left;
@@ -72,27 +73,33 @@ body {
   display: flex;
   align-items: center;
 }
+
 .sidebar .sidebar-header img {
   width: 42px;
   border-radius: 50%;
 }
+
 .sidebar .sidebar-header h2 {
   color: #161a2d;
-  font-size: 0.5 rem;
+  font-size: 0.5rem;
   font-weight: 600;
   white-space: nowrap;
   margin-left: 23px;
 }
+
 .sidebar-links h4 {
   color: #192227; /* Change to black */
   font-weight: 500;
 }
+
 .sidebar-links h4 span {
   opacity: 0;
 }
+
 .sidebar:hover .sidebar-links h4 span {
   opacity: 1;
 }
+
 .sidebar-links .menu-separator {
   position: absolute;
   left: 0;
@@ -105,10 +112,12 @@ body {
   transform-origin: right;
   transition-delay: 0.2s;
 }
+
 .sidebar:hover .sidebar-links .menu-separator {
   transition-delay: 0s;
   transform: scaleX(0);
 }
+
 .sidebar-links {
   list-style: none;
   margin-top: 20px;
@@ -116,9 +125,11 @@ body {
   overflow-y: auto;
   scrollbar-width: none;
 }
+
 .sidebar-links::-webkit-scrollbar {
   display: none;
 }
+
 .sidebar-links li a {
   font-size: 1rem;
   display: flex;
@@ -131,42 +142,51 @@ body {
   text-decoration: none;
   transition: 0.2s ease;
 }
+
 .sidebar-links li a:hover {
   background: #f9a600;
   color: #fff;
   border-radius: 4px;
 }
+
 .user-account {
   margin-top: auto;
   padding: 12px 10px;
   margin-left: -10px;
 }
+
 .user-profile {
   display: flex;
   align-items: center;
   color: #161a2d;
 }
+
 .user-profile img {
   width: 50px;
   border-radius: 60%;
   border: 2px solid #fff;
 }
+
 .user-profile h3 {
   font-size: 1rem;
   font-weight: 600;
 }
+
 .user-profile h3,
 .user-profile span {
   color: #192227;
 }
+
 .user-profile span {
   font-size: 0.775rem;
   font-weight: 600;
 }
+
 .user-detail {
   margin-left: 23px;
   white-space: nowrap;
 }
+
 .sidebar:hover .user-account {
   background: #fff;
   border-radius: 4px;
@@ -179,12 +199,15 @@ body {
   margin: 10px 0;
   position: relative;
 }
+
 .sidebar-links h4 span {
   opacity: 0;
 }
+
 .sidebar:hover .sidebar-links h4 span {
   opacity: 1;
 }
+
 .sidebar-links .menu-separator {
   position: absolute;
   left: 0;
@@ -197,10 +220,12 @@ body {
   transform-origin: right;
   transition-delay: 0.2s;
 }
+
 .sidebar:hover .sidebar-links .menu-separator {
   transition-delay: 0s;
   transform: scaleX(0);
 }
+
 .sidebar-links {
   list-style: none;
   margin-top: 20px;
@@ -208,9 +233,11 @@ body {
   overflow-y: auto;
   scrollbar-width: none;
 }
+
 .sidebar-links::-webkit-scrollbar {
   display: none;
 }
+
 .sidebar-links li a {
   display: flex;
   align-items: center;
@@ -222,42 +249,96 @@ body {
   text-decoration: none;
   transition: 0.2s ease;
 }
+
 .sidebar-links li a:hover {
   color: #fff;
   background: #f9a600;
   border-radius: 4px;
 }
+
 .user-account {
   margin-top: auto;
   padding: 12px 10px;
   margin-left: -10px;
 }
+
 .user-profile {
   display: flex;
   align-items: center;
   color: #161a2d;
 }
+
 .user-profile img {
   width: 42px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
+
 .user-profile h3 {
   font-size: 1rem;
   font-weight: 600;
 }
+
 .user-profile span {
   font-size: 0.775rem;
   font-weight: 600;
 }
+
 .user-detail {
   margin-left: 23px;
   white-space: nowrap;
 }
+
 .sidebar:hover .user-account {
   background: #f9a600;
   border-radius: 4px;
 }
 
 @media (max-width: 768px) {
+  .main-content{
+    margin-left: 25px;
+  }
+
+  .sidebar {
+    padding: 15px 5px;
+    width: 55px; /* Collapsed width */
+  }
+
+  .sidebar:hover {
+    width: 200px; /* Expanded width on hover */
+  }
+
+  .navbar {
+    padding-left: 70px; /* Adjust navbar padding */
+  }
+
+  .sidebar .sidebar-header h2 {
+    display: none; /* Hide title on smaller screens */
+  }
+
+  .sidebar-links h4 {
+    display: none; /* Hide labels on smaller screens */
+  }
+
+  .sidebar-links li a:hover {
+    background: #f9a600;
+    color: #fff;
+  }
+
+  .user-profile {
+    margin-left: 13px;
+  }
+
+  .user-profile img {
+    width: 36px; /* Adjust image size for mobile */
+  }
+
+  .user-profile h3,
+  .user-profile span {
+    display: none; /* Hide user info on mobile */
+  }
+
+  .user-account {
+    padding: 5px 0; /* Adjust padding for user account */
+  }
 }
