@@ -29,68 +29,95 @@
                 <select id="orderBy" name="orderBy">
                     <option value="default">Default</option>
                 </select>
-    
-                <label for="account">Account</label>
-                <select id="account" name="account">
-                    <option value="all">All accounts</option>
-                </select>
-    
+        
                 <label for="fromTo">From / To</label>
                 <input type="text" id="fromTo" name="fromTo">
-    
-                <label for="notes">Notes</label>
-                <input type="text" id="notes" name="notes">
-    
-                <div class="filter-type">
-                    <div class="type-label">Type</div>
-                    <label><input type="checkbox" name="debts" checked> Debts</label>
-                    <label><input type="checkbox" name="credits" checked> Credits</label>
+        
+                <label for="transactionType">Type</label>
+                <select id="transactionType" name="transactionType">
+                    <option value="all">All Types</option>
+                    <option value="debts">Debts</option>
+                    <option value="credits">Credits</option>
+                </select>
+        
+                <div class="button-container">
+                    <button type="button" class="cancel-btn">CANCEL</button>
                 </div>
-    
-                <button type="button" class="cancel-btn">CANCEL</button>
             </form>
         </div>
-    
+
         <div class="budgets-container">
             <div class="budget-card">
                 <div class="budget-header">
                     <span class="material-symbols-outlined budget-icon">account_balance</span>
                     Debt: Frank ➔ You
-                    <span class="date-range">08/30/2024 - 11/18/2024</span>
+                    <span class="date-range">2024-10-10 - 2024-10-24</span>
                 </div>
                 <div class="progress-container">
                     <div class="progress-bar" style="width: 33%;"></div>
                 </div>
-                <div class="amount">$100.00 / $300.00</div>
-                <div class="residual">Residual amount: $200.00</div>
-                <div class="actions">
-                    <button class="add-btn">+</button>
-                    <button class="view-btn">👁</button>
-                    <button class="edit-btn">✏️</button>
-                    <button class="delete-btn">🗑</button>
+                <div class="amount-edit-row">
+                    <div class="amount">$100.00 / $300.00</div>
+                    <div class="actions">
+                        <button class="edit-btn">
+                            <span class="material-symbols-outlined">edit</span> Edit
+                        </button>
+                    </div>
                 </div>
-            </div>
+                <div class="residual">Residual amount: $200.00</div>
+            </div>            
     
             <div class="budget-card">
                 <div class="budget-header">
                     <span class="material-symbols-outlined budget-icon">credit_card</span>
                     Credit: You ➔ Sam
-                    <span class="date-range">09/29/2024 - 10/29/2024</span>
+                    <span class="date-range">2024-10-10 - 2024-10-24</span>
                 </div>
                 <div class="progress-container">
                     <div class="progress-bar" style="width: 0%;"></div>
                 </div>
-                <div class="amount">$0.00 / $30.00</div>
-                <div class="residual">Residual amount: $30.00</div>
-                <div class="actions">
-                    <button class="add-btn">+</button>
-                    <button class="view-btn">👁</button>
-                    <button class="edit-btn">✏️</button>
-                    <button class="delete-btn">🗑</button>
+                <div class="amount-edit-row">
+                    <div class="amount">$100.00 / $300.00</div>
+                    <div class="actions">
+                        <button class="edit-btn">
+                            <span class="material-symbols-outlined">edit</span> Edit
+                        </button>
+                    </div>
                 </div>
+                <div class="residual">Residual amount: $200.00</div>
             </div>
     
-            <div class="total-residual">Residual amount (Total): -$170.00</div>
+        </div>
+    </div>
+    
+
+    <div class="floating-buttons">
+        <button id="addButton" class="floating-button add">+</button>
+        <button id="subtractButton" class="floating-button subtract">−</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content slide-in-v" style="animation: slideInV 0.5s forwards;">
+            <h2 id="modal-title">Add New Debt / Credit</h2>
+            
+            <form id="debtCreditForm">
+                <label for="person">Person</label>
+                <input type="text" id="person" name="person" placeholder="Enter person's name" required>
+                
+                <label for="amount">Amount ($)</label>
+                <input type="number" id="amount" name="amount" required>
+    
+                <label for="dateStart">Date Start</label>
+                <input type="date" id="dateStart" name="dateStart" required>
+    
+                <label for="dateEnd">Date End</label>
+                <input type="date" id="dateEnd" name="dateEnd" required>
+    
+                <div class="button-row">
+                    <button type="button" id="cancelButton" class="cancel-button">CANCEL</button>
+                    <button type="submit" id="saveButton" class="save-button">SAVE</button>
+                </div>
+            </form>
         </div>
     </div>
     
