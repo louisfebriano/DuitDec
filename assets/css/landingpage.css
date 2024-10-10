@@ -327,7 +327,7 @@ h2 {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping of footer links */
+    flex-wrap: wrap; 
 }
 
 .footer-list li {
@@ -346,7 +346,7 @@ h2 {
 .social-media {
     display: flex;
     align-items: center;
-    margin-top: 10px; /* Space above social media icons */
+    margin-top: 10px; 
 }
 
 .social-media a {
@@ -361,7 +361,7 @@ h2 {
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
-    font-size: 0.9rem; /* Adjusted font size for better readability */
+    font-size: 0.9rem; 
 }
 
 .footer-bottom a {
@@ -477,16 +477,16 @@ h2 {
 .social-media {
     display: flex;
     align-items: center;
-    margin-top: 10px; /* Space above social media icons */
+    margin-top: 10px; 
 }
 
 .social-media a {
     margin: 0 10px;
-    color: #fdfcfc; /* Icon color */
-    font-size: 32px; /* Adjust icon size */
+    color: #fdfcfc; 
+    font-size: 32px; 
     transition: color 0.3s ease;
 }
 
 .social-media a:hover {
-    color: #f9a600; /* Change color on hover */
+    color: #f9a600; 
 }
