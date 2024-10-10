@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="/assets/css/budgets.css">
     <link rel="stylesheet" href="/assets/css/sidebar.css">
-    <link rel="stylesheet" href="/assets/css/floating.css">
 
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -27,7 +26,7 @@
         <!-- Weekly Budget Card -->
         <div class="budget-card">
             <h2>WEEKLY BUDGETS</h2>
-            <div class="period highlight">Week 4 of August 2024</div>
+            <div class="period highlight">30 Aug 2024 - 5 Sep 2024</div>
             <div class="category">
                 <span class="material-symbols-outlined icon">theaters</span>
                 <div class="details">
@@ -94,6 +93,51 @@
                     <div class="residual negative">Over budget by: -$25.00</div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    
+    <div class="floating-buttons">
+        <button id="addButton" class="floating-button add">+</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content slide-in-v" style="animation: slideInV 0.5s forwards;">
+            <h2 id="modal-title">New Budgets</h2>
+            
+            <form id="Form">
+                <label for="value">Budgets amount ($)</label>
+                <input type="number" id="value" name="value" required>
+
+                <label for="category">Category</label>
+                <div class="input-row">
+                    <select id="category" name="category">
+                        <option value="entertainment">Entertainment</option>
+                        <option value="food">Food</option>
+                        <option value="travel">Travel</option>
+                    </select>
+                </div>
+                
+                <label for="account">Account</label>
+                <select id="account" name="account">
+                    <option value="wallet">Wallet</option>
+                    <option value="bankAccount">Bank Account</option>
+                </select>
+    
+                <label for="period">Period</label>
+                <select id="period" name="period">
+                    <option value="bankAccount">Week</option>
+                    <option value="wallet">Montht</option>
+                </select>
+                
+                <label for="date">Date Start</label>
+                <input type="date" id="date" name="date" required>
+            
+                <div class="button-row">
+                    <button type="button" id="cancelButton" class="cancel-button">CANCEL</button>
+                    <button type="submit" class="save-button">SAVE</button>
+                </div>
+            </form>
         </div>
     </div>
     
