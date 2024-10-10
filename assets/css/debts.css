@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+    display: flex;
+    
+    width: 100%;
+    margin-left: 85px;
+    margin-top: 60px;
+    
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Filter container */
+.filter-container {
+    background-color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+.filter-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.filter-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.filter-form select, .filter-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-type {
+    margin-top: 10px;
+}
+
+.cancel-btn {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Budget cards */
+.budgets-container {
+    flex-grow: 1;
+}
+
+.budget-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.budget-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.budget-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.date-range {
+    font-size: 14px;
+    color: #666;
+}
+
+.progress-container {
+    background-color: #f0f0f0;
+    height: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background-color: #ff4d4d;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.amount {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.residual {
+    color: red;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.total-residual {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    margin-top: 20px;
+}

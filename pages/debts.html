@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgets</title>
+
+    <link rel="stylesheet" href="/assets/css/debts.css">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    
+    <div class="navbar">
+        <div id="sidebarContainer"></div>
+        <div class="navbar-title">
+            <h1>Debts</h1>
+        </div>
+    </div>    
+
+    <div class="main-content">
+        <div class="filter-container">
+            <div class="filter-title">FILTER</div>
+            <form class="filter-form">
+                <label for="orderBy">Order by</label>
+                <select id="orderBy" name="orderBy">
+                    <option value="default">Default</option>
+                </select>
+    
+                <label for="account">Account</label>
+                <select id="account" name="account">
+                    <option value="all">All accounts</option>
+                </select>
+    
+                <label for="fromTo">From / To</label>
+                <input type="text" id="fromTo" name="fromTo">
+    
+                <label for="notes">Notes</label>
+                <input type="text" id="notes" name="notes">
+    
+                <div class="filter-type">
+                    <div class="type-label">Type</div>
+                    <label><input type="checkbox" name="debts" checked> Debts</label>
+                    <label><input type="checkbox" name="credits" checked> Credits</label>
+                </div>
+    
+                <button type="button" class="cancel-btn">CANCEL</button>
+            </form>
+        </div>
+    
+        <div class="budgets-container">
+            <div class="budget-card">
+                <div class="budget-header">
+                    <span class="material-symbols-outlined budget-icon">account_balance</span>
+                    Debt: Frank ➔ You
+                    <span class="date-range">08/30/2024 - 11/18/2024</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 33%;"></div>
+                </div>
+                <div class="amount">$100.00 / $300.00</div>
+                <div class="residual">Residual amount: $200.00</div>
+                <div class="actions">
+                    <button class="add-btn">+</button>
+                    <button class="view-btn">👁</button>
+                    <button class="edit-btn">✏️</button>
+                    <button class="delete-btn">🗑</button>
+                </div>
+            </div>
+    
+            <div class="budget-card">
+                <div class="budget-header">
+                    <span class="material-symbols-outlined budget-icon">credit_card</span>
+                    Credit: You ➔ Sam
+                    <span class="date-range">09/29/2024 - 10/29/2024</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 0%;"></div>
+                </div>
+                <div class="amount">$0.00 / $30.00</div>
+                <div class="residual">Residual amount: $30.00</div>
+                <div class="actions">
+                    <button class="add-btn">+</button>
+                    <button class="view-btn">👁</button>
+                    <button class="edit-btn">✏️</button>
+                    <button class="delete-btn">🗑</button>
+                </div>
+            </div>
+    
+            <div class="total-residual">Residual amount (Total): -$170.00</div>
+        </div>
+    </div>
+    
+    
+    <script src="/assets/js/debts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+</html>
