@@ -21,15 +21,16 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-left: 85px;
-  margin-top: 100px;
+  margin: 100px auto; /* Centering the main content */
+  padding: 0 20px; /* Add padding for mobile */
+  max-width: 1200px; /* Limit max width for larger screens */
 }
 
 .budget-card {
   background-color: white;
   border-radius: 8px;
   padding: 20px;
-  margin: 10px 100px;
+  margin: 10px 0; /* Adjusted margin for vertical spacing */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -123,7 +124,7 @@ body {
   background-color: #f28b00;
 }
 
-/* floating button */
+/* Floating button */
 .floating-buttons {
   position: fixed;
   bottom: 20px;
@@ -168,7 +169,7 @@ body {
   margin: 5% auto;
   padding: 20px;
   border-radius: 8px;
-  width: 50%;
+  width: 90%; /* Adjusted for mobile view */
   max-width: 600px;
   max-height: 80vh;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -247,12 +248,28 @@ button {
   transform: translateY(-20%);
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
+  .main {
+    margin-left: 70px;
+  }
+
   .modal-content {
-    width: 90%;
+    width: 90%; /* Full width modal on small screens */
+  }
+
+  .navbar {
+    padding: 10px; /* Adjust navbar padding */
+  }
+
+  .icon {
+    font-size: 40px; /* Smaller icons on mobile */
+  }
+
+  button {
+    padding: 8px 12px; /* Adjust button size for mobile */
   }
 }
-
 
 .close {
   float: right;
