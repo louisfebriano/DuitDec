@@ -46,45 +46,44 @@
                 </div>
             </div>
         
-            <div class="card slide-in-v" 
-            style="animation: slideInV 1s forwards;" >
-                <div style="display: flex;">
-                    <div class="donut-chart-placeholder"></div>
-                    <div class="card-content" style="margin-left: 20px;">
-                        <h3>This Month</h3>
-                        <div class="card-container">
-                            <p>Income:</p>
-                            <p class="positive">$1,500.00</p>
-                        </div>
-                        <div class="card-container">
-                            <p>Outcome:</p>
-                            <p class="negative">-$396.76</p>
-                        </div>
-                        <hr>
-                        <p  style="display: flex; justify-content: end;"class="positive">
-                            $1,103.24</p>
+        <div class="card slide-in-v" style="animation: slideInV 1s forwards;">
+            <div style="display: flex;">
+
+                <canvas class="donut-chart" id="chart-this-month"></canvas>
+                <div class="card-content" style="margin-left: 20px;">
+                    <h3>This Month</h3>
+                    <div class="card-container">
+                        <p>Income:</p>
+                        <p class="positive">$1,500.00</p>
                     </div>
+                    <div class="card-container">
+                        <p>Outcome:</p>
+                        <p class="negative">-$396.76</p>
+                    </div>
+                    <hr>
+                    <p style="display: flex; justify-content: end;" class="positive">
+                        $1,103.24</p>
                 </div>
             </div>
-            
-            <div class="card slide-in-v" 
-            style="animation: slideInV 1.5s forwards;" >
-                <div style="display: flex;">
-                    <div class="donut-chart-placeholder"></div>
-                    <div class="card-content" style="margin-left: 20px;">
-                        <h3>Last Month</h3>
-                        <div class="card-container">
-                            <p>Income:</p>
-                            <p class="positive">$1,500.00</p>
-                        </div>
-                        <div class="card-container">
-                            <p>Outcome:</p>
-                            <p class="negative">-$396.76</p>
-                        </div>
-                        <hr>
-                        <p style="display: flex; justify-content: end;"class="positive">
-                            $1,103.24</p>
+        </div>
+
+        <div class="card slide-in-v" style="animation: slideInV 1.5s forwards;">
+            <div style="display: flex;">
+
+                <canvas class="donut-chart" id="chart-last-month"></canvas>
+                <div class="card-content" style="margin-left: 20px;">
+                    <h3>Last Month</h3>
+                    <div class="card-container">
+                        <p>Income:</p>
+                        <p class="positive">$1,500.00</p>
                     </div>
+                    <div class="card-container">
+                        <p>Outcome:</p>
+                        <p class="negative">-$396.76</p>
+                    </div>
+                    <hr>
+                    <p style="display: flex; justify-content: end;" class="positive">
+                        $1,103.24</p>
                 </div>
             </div>
         </div>
@@ -125,7 +124,7 @@
 
     </div>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/assets/js/dashboard.js"></script>
 </body>
 </html>

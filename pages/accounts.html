@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,8 @@
     <link rel="stylesheet" href="/assets/css/sidebar.css">
     <link rel="stylesheet" href="/assets/css/accounts.css">
     <link rel="stylesheet" href="/assets/css/floating.css">
-
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
 </head>
 <body>
 
@@ -27,8 +26,12 @@
         <div class="row">
             <div class="card-summary">
                 <div class="summary-title">
-                    <p><span class="material-symbols-outlined">arrow_drop_down</span></p>
+                    <p><span class="material-symbols-outlined" id="dropdown-button" style="cursor: pointer;">arrow_drop_down</span></p>
                     <p>Total: <span style="color: #3dbd2e;" id="total-amount">$13,627.71</span></p>
+                </div>
+
+                <div class="chart" id="chart-container" style="display: none;">
+                    <canvas class="donut-chart" id="chart"></canvas>
                 </div>
             </div>
         </div>
