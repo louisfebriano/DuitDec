@@ -2,42 +2,56 @@ $(document).ready(function () {
     let transactions = [];
     let totalAmount = 0;
 
-    const incomeCategories = ["💼 Salary", "🎁 Bonus", "💰 Interest", "🎉 Gifts", "📈 Investments"];
-    const expenseCategories = ["🍽️ Food", "🎬 Entertainment", "🛍️ Shopping", "⛽ Fuel", "🔧 Others"];
+    const categoryMap = {
+        "💼 Salary": "Salary",
+        "🎁 Bonus": "Bonus",
+        "💰 Interest": "Interest",
+        "🎉 Gifts": "Gifts",
+        "📈 Investments": "Investments",
+        "🍽️ Food": "Food",
+        "🎬 Entertainment": "Entertainment",
+        "🛍️ Shopping": "Shopping",
+        "⛽ Fuel": "Fuel",
+        "🔧 Others": "Others"
+    };
 
+    const incomeCategories = Object.keys(categoryMap).filter(key => ["Salary", "Bonus", "Interest", "Gifts", "Investments"].includes(categoryMap[key]));
+    const expenseCategories = Object.keys(categoryMap).filter(key => ["Food", "Entertainment", "Shopping", "Fuel", "Others"].includes(categoryMap[key]));
 
-    function populateCategoryOptions(categories) {
-        const $categorySelect = $("#transaction-category");
-        $categorySelect.empty();
-        $categorySelect.append('<option value="">Select Category</option>');
+    function populateCategoryOptions(categories, selectElement) {
+        selectElement.empty();
+        selectElement.append('<option value="">Select Category</option>');
         categories.forEach((category) => {
-            $categorySelect.append(`<option value="${category}">${category}</option>`);
+            selectElement.append(`<option value="${category}">${category}</option>`);
         });
     }
 
+    populateCategoryOptions([...incomeCategories, ...expenseCategories], $("#category-filter"));
+
     $("#add-income-button").click(function () {
         $("#modal-title").text("Add Income");
-        populateCategoryOptions(incomeCategories);
+        populateCategoryOptions(incomeCategories, $("#transaction-category"));
         $("#add-transaction-modal").show();
-        $("#add-transaction-form").off('submit').on('submit', function (event) {
-            event.preventDefault();
-            addTransaction(true);
-        });
+        setupTransactionForm(true);
     });
 
     $("#add-expense-button").click(function () {
         $("#modal-title").text("Add Expense");
-        populateCategoryOptions(expenseCategories);
+        populateCategoryOptions(expenseCategories, $("#transaction-category"));
         $("#add-transaction-modal").show();
-        $("#add-transaction-form").off('submit').on('submit', function (event) {
-            event.preventDefault();
-            addTransaction(false); 
-        });
+        setupTransactionForm(false);
     });
 
     $(".close").click(function () {
         $("#add-transaction-modal").hide();
     });
+
+    function setupTransactionForm(isIncome) {
+        $("#add-transaction-form").off('submit').on('submit', function (event) {
+            event.preventDefault();
+            addTransaction(isIncome);
+        });
+    }
 
     function addTransaction(isIncome) {
         const category = $("#transaction-category").val();
@@ -50,15 +64,20 @@ $(document).ready(function () {
             return;
         }
 
-        if (isIncome) {
-            transactions.push({ category, amount, date, notes, type: "income" });
-            totalAmount += amount;
-        } else {
-            transactions.push({ category, amount, date, notes, type: "expense" });
-            totalAmount -= amount;
-        }
+        const standardizedCategory = categoryMap[category] || category;
 
-        updateTransactionList(transactions);
+        const newTransaction = {
+            category: standardizedCategory,
+            amount,
+            date,
+            notes,
+            type: isIncome ? "income" : "expense"
+        };
+
+        transactions.push(newTransaction);
+        totalAmount += isIncome ? amount : -amount;
+
+        updateTransactionList();
         $("#add-transaction-form").trigger("reset");
         $("#add-transaction-modal").hide();
     }
@@ -69,36 +88,32 @@ $(document).ready(function () {
         const toDate = $("#to-date").val();
 
         const filteredTransactions = transactions.filter((transaction) => {
-            let matchesCategory = !categoryFilter || transaction.category === categoryFilter;
-            let matchesDate =
-                (!fromDate || new Date(transaction.date) >= new Date(fromDate)) &&
-                (!toDate || new Date(transaction.date) <= new Date(toDate));
+            const categoryMatch = !categoryFilter || categoryMap[categoryFilter] === transaction.category;
+            const dateMatch = (!fromDate || new Date(transaction.date) >= new Date(fromDate)) &&
+                              (!toDate || new Date(transaction.date) <= new Date(toDate));
 
-            return matchesCategory && matchesDate;
+            return categoryMatch && dateMatch;
         });
 
         updateTransactionList(filteredTransactions);
     }
 
+    $("#apply-filter-button").click(applyFilters);
 
-    $("#apply-filter-button").click(function () {
-        applyFilters();
-    });
-
-    function updateTransactionList(transactionsToShow) {
+    function updateTransactionList(transactionsToShow = transactions) {
         const $list = $("#transactions-list");
         $list.empty();
 
         transactionsToShow.forEach((transaction) => {
             const icon = transaction.type === "income" ? "+" : "-";
             const amountClass = transaction.type === "income" ? "positive" : "negative";
-            const iconClass = transaction.type === "income" ? "icon-positive" : "icon-negative"; 
+            const iconClass = transaction.type === "income" ? "icon-positive" : "icon-negative";
             
             const $item = $(`
                 <div class="transaction-item ${amountClass}">
                     <div class="transaction-icon ${iconClass}">${icon}</div>
                     <div class="transaction-details">
-                        <p>${transaction.category}</p>
+                        <p>${Object.keys(categoryMap).find(key => categoryMap[key] === transaction.category) || transaction.category}</p>
                         <p>${transaction.notes}</p>
                     </div>
                     <div class="transaction-right">
@@ -115,6 +130,10 @@ $(document).ready(function () {
         const totalAmountToShow = transactionsToShow.reduce((acc, transaction) => {
             return transaction.type === "income" ? acc + transaction.amount : acc - transaction.amount;
         }, 0);
-        $("#total-amount").text(`${totalAmountToShow < 0 ? '-' : ''} $${Math.abs(totalAmountToShow).toFixed(2)}`);
+        
+        $("#total-amount")
+            .text(`${totalAmountToShow < 0 ? '-' : ''} $${Math.abs(totalAmountToShow).toFixed(2)}`)
+            .removeClass("positive negative")
+            .addClass(totalAmountToShow >= 0 ? "positive" : "negative");
     }
 });
